@@ -1,0 +1,71 @@
+@import '@/styles/variables';
+
+.outer {
+  background-color: $color--gray-100;
+  color: $color--white;
+}
+
+.section__phone {
+  margin-top: 0.375rem;
+  text-align: center;
+  color: $color--brand-blue-050;
+  font-weight: $font--heading--bold;
+  max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section__form {
+  margin-top: 1rem;
+}
+
+.section__form__twocol {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.section__form__message {
+  margin-top: 1rem;
+}
+
+.section__form__submit {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.section__success,
+.section__form__error {
+  margin-top: $margin--tb-mobile--child;
+  text-align: center;
+}
+
+.section__success {
+  color: $color--white;
+  font-weight: $font--body--bold;
+}
+
+.section__form__error {
+  color: $color--red-020;
+}
+
+@media (min-width: $media--tablet) {
+  .section__form {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section__form__submit {
+    width: inherit;
+    min-width: 16rem;
+    align-self: center;
+  }
+}
+
+@media (min-width: $media--desktop) {
+  .section__form__twocol {
+    grid: auto-flow / 1fr 1fr;
+  }
+}

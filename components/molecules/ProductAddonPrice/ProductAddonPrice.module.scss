@@ -1,0 +1,14 @@
+@import '@/styles/variables';
+
+.addons {
+  color: $color--gray-080;
+  font-weight: $font--heading--semibold;
+  font-size: 15px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.addons__addon {
+  margin-bottom: 0.25rem;
+}

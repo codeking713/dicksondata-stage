@@ -1,0 +1,58 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfViewProductSubcategoriesSection from './'
+
+<Meta
+  title="Components/Organisms/AcfViewProductSubcategoriesSection"
+  component={AcfViewProductSubcategoriesSection}
+/>
+
+# Component
+
+Use this to display the view product subcategories section on a page
+
+<Canvas>
+  <Story name="Component">
+    <AcfViewProductSubcategoriesSection
+      heading="Parts & accessories"
+      subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet kroin gravida dolo."
+      copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet kroin gravida dolo."
+      cta={{
+        target: 'blank',
+        title: 'See all data loggers & sensors (53)',
+        url: '#'
+      }}
+      items={[
+        {
+          heading: 'Cloud Data Loggers',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet kroin gravida dolo.',
+          link: {
+            url: '#',
+            title: 'View more',
+            target: '_blank'
+          }
+        },
+        {
+          heading: 'Cloud Data Loggers',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet kroin gravida dolo.',
+          link: {
+            url: '#',
+            title: 'View more',
+            target: '_blank'
+          }
+        },
+        {
+          heading: 'Cloud Data Loggers',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet kroin gravida dolo.',
+          link: {
+            url: '#',
+            title: 'View more',
+            target: '_blank'
+          }
+        }
+      ]}
+    />
+  </Story>
+</Canvas>

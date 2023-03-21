@@ -1,0 +1,14 @@
+@import '@/styles/variables';
+@import '@/styles/grid';
+
+.skeleton--center {
+  text-align: center;
+}
+
+.skeleton--right {
+  text-align: right;
+}
+
+.skeleton__subsection {
+  padding: 0 2rem;
+}

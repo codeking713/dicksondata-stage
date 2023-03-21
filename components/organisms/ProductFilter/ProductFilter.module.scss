@@ -1,0 +1,116 @@
+@import '@/styles/variables';
+
+.filter__header {
+  background-color: $color--brand-blue;
+  justify-content: space-between;
+  border-radius: 0.375rem 0.375rem 0 0;
+  padding: 0.9rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  p {
+    color: $color--white;
+    margin: 0;
+  }
+
+  @media (max-width: $media--tablet) {
+    padding: 0.5rem 0.9rem;
+  }
+}
+
+.filter__header__title {
+  display: flex;
+  align-items: center;
+
+  p {
+    margin-inline-start: 0.688rem;
+    font-size: 1.625rem;
+    font-weight: 700;
+  }
+}
+
+.filter__header__clear {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: $color--white;
+  font-size: 1.375rem;
+  cursor: pointer;
+
+  svg {
+    margin-inline-start: 0.688rem;
+  }
+}
+
+.filter__header__mobile {
+  margin-bottom: 1.625rem;
+  display: flex;
+  justify-content: space-between;
+
+  h4 {
+    margin-block-end: 0 !important;
+  }
+}
+
+.filter__header__mobile__clear {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #313f49;
+  font-size: 1.375rem;
+  cursor: pointer;
+  height: 1.6rem;
+
+  svg {
+    margin-inline-start: 0.688rem;
+  }
+}
+
+.filter__content {
+  min-height: 10rem;
+  background-color: $color--navy-blue-010;
+  box-sizing: border-box;
+  padding: 1.625rem 0.938rem;
+
+  h4 {
+    font-size: 1.375rem;
+    color: $color--brand-blue;
+    font-weight: 700;
+    margin-block-end: 1.625rem;
+  }
+
+  @media (max-width: $media--desktop) {
+    display: none;
+  }
+}
+
+.filter__content--overlay {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  min-width: 100%;
+  filter: drop-shadow(0 2px 14px rgba(0, 0, 0, 0.2));
+}
+
+.filter__content__items {
+  margin-block-end: 1.5rem;
+}
+
+.filter__content__items__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter__content__items__item__checkbox {
+  width: 100%;
+  margin-block-end: 1.5rem;
+
+  label {
+    margin-inline-start: 0.75rem;
+    font-weight: 600;
+    width: 100%;
+  }
+}

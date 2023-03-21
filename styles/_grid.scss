@@ -1,0 +1,831 @@
+.container {
+  width: calc(100% - 2 * var(--component-padding));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+$grid-columns: 12 !default;
+
+.grid,
+.flex,
+.inline-flex {
+  --gap: 0;
+  --gap-x: var(--gap);
+  --gap-y: var(--gap);
+
+  gap: var(--gap-y) var(--gap-x); // sass-lint:disable-line no-misspelled-properties
+
+  > * {
+    --sub-gap: 0;
+    --sub-gap-x: var(--sub-gap);
+    --sub-gap-y: var(--sub-gap);
+  }
+}
+
+.grid {
+  --grid-columns: 12;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    flex-basis: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+// #region (Safari < 14.1 fallback)
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (not (translate: none)) {
+    .grid,
+    .flex[class*='gap-'], // sass-lint:disable-line force-attribute-nesting
+    .inline-flex[class*='gap-'] {
+      // sass-lint:disable-line force-attribute-nesting
+      gap: 0; // sass-lint:disable-line no-misspelled-properties
+      margin-bottom: calc(-1 * var(--gap-y));
+      margin-left: calc(-1 * var(--gap-x));
+
+      > * {
+        margin-bottom: var(--gap-y);
+      }
+    }
+
+    .grid {
+      --offset: var(--gap-x);
+      --gap-modifier: 0;
+      --offset-modifier: 1;
+
+      > * {
+        margin-left: var(--offset);
+      }
+    }
+
+    .flex[class*='gap-'],  // sass-lint:disable-line force-attribute-nesting
+    .inline-flex[class*='gap-'] {
+      // sass-lint:disable-line force-attribute-nesting
+      > * {
+        margin-left: var(--gap-x);
+      }
+    }
+  }
+}
+
+.gap-xxxxs {
+  --gap-x: var(--space-xxxxs);
+  --gap-y: var(--space-xxxxs);
+
+  > * {
+    --sub-gap-x: var(--space-xxxxs);
+    --sub-gap-y: var(--space-xxxxs);
+  }
+}
+
+// sass-lint:disable one-declaration-per-line
+.gap-xxxs {
+  --gap-x: var(--space-xxxs);
+  --gap-y: var(--space-xxxs);
+
+  > * {
+    --sub-gap-x: var(--space-xxxs);
+    --sub-gap-y: var(--space-xxxs);
+  }
+}
+
+.gap-xxs {
+  --gap-x: var(--space-xxs);
+  --gap-y: var(--space-xxs);
+
+  > * {
+    --sub-gap-x: var(--space-xxs);
+    --sub-gap-y: var(--space-xxs);
+  }
+}
+
+.gap-xs {
+  --gap-x: var(--space-xs);
+  --gap-y: var(--space-xs);
+
+  > * {
+    --sub-gap-x: var(--space-xs);
+    --sub-gap-y: var(--space-xs);
+  }
+}
+
+.gap-sm {
+  --gap-x: var(--space-sm);
+  --gap-y: var(--space-sm);
+
+  > * {
+    --sub-gap-x: var(--space-sm);
+    --sub-gap-y: var(--space-sm);
+  }
+}
+
+.gap-md {
+  --gap-x: var(--space-md);
+  --gap-y: var(--space-md);
+
+  > * {
+    --sub-gap-x: var(--space-md);
+    --sub-gap-y: var(--space-md);
+  }
+}
+
+.gap-lg {
+  --gap-x: var(--space-lg);
+  --gap-y: var(--space-lg);
+
+  > * {
+    --sub-gap-x: var(--space-lg);
+    --sub-gap-y: var(--space-lg);
+  }
+}
+
+.gap-xl {
+  --gap-x: var(--space-xl);
+  --gap-y: var(--space-xl);
+
+  > * {
+    --sub-gap-x: var(--space-xl);
+    --sub-gap-y: var(--space-xl);
+  }
+}
+
+.gap-xxl {
+  --gap-x: var(--space-xxl);
+  --gap-y: var(--space-xxl);
+
+  > * {
+    --sub-gap-x: var(--space-xxl);
+    --sub-gap-y: var(--space-xxl);
+  }
+}
+
+.gap-xxxl {
+  --gap-x: var(--space-xxxl);
+  --gap-y: var(--space-xxxl);
+
+  > * {
+    --sub-gap-x: var(--space-xxxl);
+    --sub-gap-y: var(--space-xxxl);
+  }
+}
+
+.gap-xxxxl {
+  --gap-x: var(--space-xxxxl);
+  --gap-y: var(--space-xxxxl);
+
+  > * {
+    --sub-gap-x: var(--space-xxxxl);
+    --sub-gap-y: var(--space-xxxxl);
+  }
+}
+
+.gap-0 {
+  --gap-x: 0;
+  --gap-y: 0;
+
+  > * {
+    --sub-gap-x: 0;
+    --sub-gap-y: 0;
+  }
+}
+
+.gap-x-xxxxs {
+  --gap-x: var(--space-xxxxs);
+
+  > * {
+    --sub-gap-x: var(--space-xxxxs);
+  }
+}
+
+.gap-x-xxxs {
+  --gap-x: var(--space-xxxs);
+
+  > * {
+    --sub-gap-x: var(--space-xxxs);
+  }
+}
+
+.gap-x-xxs {
+  --gap-x: var(--space-xxs);
+
+  > * {
+    --sub-gap-x: var(--space-xxs);
+  }
+}
+
+.gap-x-xs {
+  --gap-x: var(--space-xs);
+
+  > * {
+    --sub-gap-x: var(--space-xs);
+  }
+}
+
+.gap-x-sm {
+  --gap-x: var(--space-sm);
+
+  > * {
+    --sub-gap-x: var(--space-sm);
+  }
+}
+
+.gap-x-md {
+  --gap-x: var(--space-md);
+
+  > * {
+    --sub-gap-x: var(--space-md);
+  }
+}
+
+.gap-x-lg {
+  --gap-x: var(--space-lg);
+
+  > * {
+    --sub-gap-x: var(--space-lg);
+  }
+}
+
+.gap-x-xl {
+  --gap-x: var(--space-xl);
+
+  > * {
+    --sub-gap-x: var(--space-xl);
+  }
+}
+
+.gap-x-xxl {
+  --gap-x: var(--space-xxl);
+
+  > * {
+    --sub-gap-x: var(--space-xxl);
+  }
+}
+
+.gap-x-xxxl {
+  --gap-x: var(--space-xxxl);
+
+  > * {
+    --sub-gap-x: var(--space-xxxl);
+  }
+}
+
+.gap-x-xxxxl {
+  --gap-x: var(--space-xxxxl);
+
+  > * {
+    --sub-gap-x: var(--space-xxxxl);
+  }
+}
+
+.gap-x-0 {
+  --gap-x: 0;
+
+  > * {
+    --sub-gap-x: 0;
+  }
+}
+
+.gap-y-xxxxs {
+  --gap-y: var(--space-xxxxs);
+
+  > * {
+    --sub-gap-y: var(--space-xxxxs);
+  }
+}
+
+.gap-y-xxxs {
+  --gap-y: var(--space-xxxs);
+
+  > * {
+    --sub-gap-y: var(--space-xxxs);
+  }
+}
+
+.gap-y-xxs {
+  --gap-y: var(--space-xxs);
+
+  > * {
+    --sub-gap-y: var(--space-xxs);
+  }
+}
+
+.gap-y-xs {
+  --gap-y: var(--space-xs);
+
+  > * {
+    --sub-gap-y: var(--space-xs);
+  }
+}
+
+.gap-y-sm {
+  --gap-y: var(--space-sm);
+
+  > * {
+    --sub-gap-y: var(--space-sm);
+  }
+}
+
+.gap-y-md {
+  --gap-y: var(--space-md);
+
+  > * {
+    --sub-gap-y: var(--space-md);
+  }
+}
+
+.gap-y-lg {
+  --gap-y: var(--space-lg);
+
+  > * {
+    --sub-gap-y: var(--space-lg);
+  }
+}
+
+.gap-y-xl {
+  --gap-y: var(--space-xl);
+
+  > * {
+    --sub-gap-y: var(--space-xl);
+  }
+}
+
+.gap-y-xxl {
+  --gap-y: var(--space-xxl);
+
+  > * {
+    --sub-gap-y: var(--space-xxl);
+  }
+}
+
+.gap-y-xxxl {
+  --gap-y: var(--space-xxxl);
+
+  > * {
+    --sub-gap-y: var(--space-xxxl);
+  }
+}
+
+.gap-y-xxxxl {
+  --gap-y: var(--space-xxxxl);
+
+  > * {
+    --sub-gap-y: var(--space-xxxxl);
+  }
+}
+
+.gap-y-0 {
+  --gap-y: 0;
+
+  > * {
+    --sub-gap-y: 0;
+  }
+}
+
+$grid-col-class-list: ''; // list of col-{span} classes
+
+@for $i from 1 through $grid-columns {
+  $grid-col-class-list: $grid-col-class-list + '.col-#{$i}';
+
+  @if ($i < $grid-columns) {
+    $grid-col-class-list: $grid-col-class-list + ', ';
+  }
+  .grid-col-#{$i} {
+    --grid-columns: #{$i};
+  } // set number of grid columns
+  .col-#{$i} {
+    --span: #{$i};
+  } // set grid item span
+}
+
+#{$grid-col-class-list} {
+  flex-basis: calc(
+    (
+        (
+            100% - (var(--grid-columns) - var(--gap-modifier, 1)) *
+              var(--sub-gap-x)
+          ) * var(--span) / var(--grid-columns)
+      ) + (var(--span) - 1) * var(--sub-gap-x)
+  );
+  max-width: calc(
+    (
+        (
+            100% - (var(--grid-columns) - var(--gap-modifier, 1)) *
+              var(--sub-gap-x)
+          ) * var(--span) / var(--grid-columns)
+      ) + (var(--span) - 1) * var(--sub-gap-x)
+  );
+}
+
+.col {
+  // auto-expanding column
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.col-content {
+  // column width depends on its content
+  flex-grow: 0;
+  flex-basis: initial;
+  max-width: initial;
+}
+
+// offset
+$grid-offset-class-list: ''; // list of offset-{span} classes
+
+@for $i from 1 through $grid-columns - 1 {
+  $grid-offset-class-list: $grid-offset-class-list + '.offset-#{$i}';
+
+  @if ($i < $grid-columns) {
+    $grid-offset-class-list: $grid-offset-class-list + ', ';
+  }
+  .offset-#{$i} {
+    --offset: #{$i};
+  }
+}
+
+#{$grid-offset-class-list} {
+  margin-left: calc(
+    (
+        (
+            100% - (var(--grid-columns) - var(--gap-modifier, 1)) *
+              var(--sub-gap-x)
+          ) * var(--offset) / var(--grid-columns)
+      ) + (var(--offset) + var(--offset-modifier, 0)) * var(--sub-gap-x)
+  );
+}
+
+// responsive variations
+@each $breakpoint, $value in $breakpoints {
+  @include breakpoint(#{$breakpoint}) {
+    .gap-xxxxs\@#{$breakpoint} {
+      --gap-x: var(--space-xxxxs);
+      --gap-y: var(--space-xxxxs);
+
+      > * {
+        --sub-gap-x: var(--space-xxxxs);
+        --sub-gap-y: var(--space-xxxxs);
+      }
+    }
+    .gap-xxxs\@#{$breakpoint} {
+      --gap-x: var(--space-xxxs);
+      --gap-y: var(--space-xxxs);
+
+      > * {
+        --sub-gap-x: var(--space-xxxs);
+        --sub-gap-y: var(--space-xxxs);
+      }
+    }
+    .gap-xxs\@#{$breakpoint} {
+      --gap-x: var(--space-xxs);
+      --gap-y: var(--space-xxs);
+
+      > * {
+        --sub-gap-x: var(--space-xxs);
+        --sub-gap-y: var(--space-xxs);
+      }
+    }
+    .gap-xs\@#{$breakpoint} {
+      --gap-x: var(--space-xs);
+      --gap-y: var(--space-xs);
+
+      > * {
+        --sub-gap-x: var(--space-xs);
+        --sub-gap-y: var(--space-xs);
+      }
+    }
+    .gap-sm\@#{$breakpoint} {
+      --gap-x: var(--space-sm);
+      --gap-y: var(--space-sm);
+
+      > * {
+        --sub-gap-x: var(--space-sm);
+        --sub-gap-y: var(--space-sm);
+      }
+    }
+    .gap-md\@#{$breakpoint} {
+      --gap-x: var(--space-md);
+      --gap-y: var(--space-md);
+
+      > * {
+        --sub-gap-x: var(--space-md);
+        --sub-gap-y: var(--space-md);
+      }
+    }
+    .gap-lg\@#{$breakpoint} {
+      --gap-x: var(--space-lg);
+      --gap-y: var(--space-lg);
+
+      > * {
+        --sub-gap-x: var(--space-lg);
+        --sub-gap-y: var(--space-lg);
+      }
+    }
+    .gap-xl\@#{$breakpoint} {
+      --gap-x: var(--space-xl);
+      --gap-y: var(--space-xl);
+
+      > * {
+        --sub-gap-x: var(--space-xl);
+        --sub-gap-y: var(--space-xl);
+      }
+    }
+    .gap-xxl\@#{$breakpoint} {
+      --gap-x: var(--space-xxl);
+      --gap-y: var(--space-xxl);
+
+      > * {
+        --sub-gap-x: var(--space-xxl);
+        --sub-gap-y: var(--space-xxl);
+      }
+    }
+    .gap-xxxl\@#{$breakpoint} {
+      --gap-x: var(--space-xxxl);
+      --gap-y: var(--space-xxxl);
+
+      > * {
+        --sub-gap-x: var(--space-xxxl);
+        --sub-gap-y: var(--space-xxxl);
+      }
+    }
+    .gap-xxxxl\@#{$breakpoint} {
+      --gap-x: var(--space-xxxxl);
+      --gap-y: var(--space-xxxxl);
+
+      > * {
+        --sub-gap-x: var(--space-xxxxl);
+        --sub-gap-y: var(--space-xxxxl);
+      }
+    }
+    .gap-0\@#{$breakpoint} {
+      --gap-x: 0;
+      --gap-y: 0;
+
+      > * {
+        --sub-gap-x: 0;
+        --sub-gap-y: 0;
+      }
+    }
+
+    .gap-x-xxxxs\@#{$breakpoint} {
+      --gap-x: var(--space-xxxxs);
+
+      > * {
+        --sub-gap-x: var(--space-xxxxs);
+      }
+    }
+    .gap-x-xxxs\@#{$breakpoint} {
+      --gap-x: var(--space-xxxs);
+
+      > * {
+        --sub-gap-x: var(--space-xxxs);
+      }
+    }
+    .gap-x-xxs\@#{$breakpoint} {
+      --gap-x: var(--space-xxs);
+
+      > * {
+        --sub-gap-x: var(--space-xxs);
+      }
+    }
+    .gap-x-xs\@#{$breakpoint} {
+      --gap-x: var(--space-xs);
+
+      > * {
+        --sub-gap-x: var(--space-xs);
+      }
+    }
+    .gap-x-sm\@#{$breakpoint} {
+      --gap-x: var(--space-sm);
+
+      > * {
+        --sub-gap-x: var(--space-sm);
+      }
+    }
+    .gap-x-md\@#{$breakpoint} {
+      --gap-x: var(--space-md);
+
+      > * {
+        --sub-gap-x: var(--space-md);
+      }
+    }
+    .gap-x-lg\@#{$breakpoint} {
+      --gap-x: var(--space-lg);
+
+      > * {
+        --sub-gap-x: var(--space-lg);
+      }
+    }
+    .gap-x-xl\@#{$breakpoint} {
+      --gap-x: var(--space-xl);
+
+      > * {
+        --sub-gap-x: var(--space-xl);
+      }
+    }
+    .gap-x-xxl\@#{$breakpoint} {
+      --gap-x: var(--space-xxl);
+
+      > * {
+        --sub-gap-x: var(--space-xxl);
+      }
+    }
+    .gap-x-xxxl\@#{$breakpoint} {
+      --gap-x: var(--space-xxxl);
+
+      > * {
+        --sub-gap-x: var(--space-xxxl);
+      }
+    }
+    .gap-x-xxxxl\@#{$breakpoint} {
+      --gap-x: var(--space-xxxxl);
+
+      > * {
+        --sub-gap-x: var(--space-xxxxl);
+      }
+    }
+    .gap-x-0\@#{$breakpoint} {
+      --gap-x: 0;
+
+      > * {
+        --sub-gap-x: 0;
+      }
+    }
+
+    .gap-y-xxxxs\@#{$breakpoint} {
+      --gap-y: var(--space-xxxxs);
+
+      > * {
+        --sub-gap-y: var(--space-xxxxs);
+      }
+    }
+    .gap-y-xxxs\@#{$breakpoint} {
+      --gap-y: var(--space-xxxs);
+
+      > * {
+        --sub-gap-y: var(--space-xxxs);
+      }
+    }
+    .gap-y-xxs\@#{$breakpoint} {
+      --gap-y: var(--space-xxs);
+
+      > * {
+        --sub-gap-y: var(--space-xxs);
+      }
+    }
+    .gap-y-xs\@#{$breakpoint} {
+      --gap-y: var(--space-xs);
+
+      > * {
+        --sub-gap-y: var(--space-xs);
+      }
+    }
+    .gap-y-sm\@#{$breakpoint} {
+      --gap-y: var(--space-sm);
+
+      > * {
+        --sub-gap-y: var(--space-sm);
+      }
+    }
+    .gap-y-md\@#{$breakpoint} {
+      --gap-y: var(--space-md);
+
+      > * {
+        --sub-gap-y: var(--space-md);
+      }
+    }
+    .gap-y-lg\@#{$breakpoint} {
+      --gap-y: var(--space-lg);
+
+      > * {
+        --sub-gap-y: var(--space-lg);
+      }
+    }
+    .gap-y-xl\@#{$breakpoint} {
+      --gap-y: var(--space-xl);
+
+      > * {
+        --sub-gap-y: var(--space-xl);
+      }
+    }
+    .gap-y-xxl\@#{$breakpoint} {
+      --gap-y: var(--space-xxl);
+
+      > * {
+        --sub-gap-y: var(--space-xxl);
+      }
+    }
+    .gap-y-xxxl\@#{$breakpoint} {
+      --gap-y: var(--space-xxxl);
+
+      > * {
+        --sub-gap-y: var(--space-xxxl);
+      }
+    }
+    .gap-y-xxxxl\@#{$breakpoint} {
+      --gap-y: var(--space-xxxxl);
+
+      > * {
+        --sub-gap-y: var(--space-xxxxl);
+      }
+    }
+    .gap-y-0\@#{$breakpoint} {
+      --gap-y: 0;
+
+      > * {
+        --sub-gap-y: 0;
+      }
+    }
+
+    $grid-col-class-list: ''; // list of col-{span} classes
+
+    @for $i from 1 through $grid-columns {
+      $grid-col-class-list: $grid-col-class-list +
+        '.col-#{$i}\\@#{$breakpoint}';
+
+      @if ($i < $grid-columns) {
+        $grid-col-class-list: $grid-col-class-list + ', ';
+      }
+      .grid-col-#{$i}\@#{$breakpoint} {
+        --grid-columns: #{$i};
+      } // set number of grid columns
+      .col-#{$i}\@#{$breakpoint} {
+        --span: #{$i};
+      } // set grid item span
+    }
+
+    #{$grid-col-class-list} {
+      flex-basis: calc(
+        (
+            (
+                100% - (var(--grid-columns) - var(--gap-modifier, 1)) *
+                  var(--sub-gap-x)
+              ) * var(--span) / var(--grid-columns)
+          ) + (var(--span) - 1) * var(--sub-gap-x)
+      );
+      max-width: calc(
+        (
+            (
+                100% - (var(--grid-columns) - var(--gap-modifier, 1)) *
+                  var(--sub-gap-x)
+              ) * var(--span) / var(--grid-columns)
+          ) + (var(--span) - 1) * var(--sub-gap-x)
+      );
+    }
+
+    .col\@#{$breakpoint} {
+      // auto-expanding column
+      flex-grow: 1;
+      flex-basis: 0;
+      max-width: 100%;
+    }
+
+    .col-content\@#{$breakpoint} {
+      // column width depends on its content
+      flex-grow: 0;
+      flex-basis: initial;
+      max-width: initial;
+    }
+
+    // offset
+    $grid-offset-class-list: ''; // list of offset-{span} classes
+
+    @for $i from 1 through $grid-columns - 1 {
+      $grid-offset-class-list: $grid-offset-class-list +
+        '.offset-#{$i}\\@#{$breakpoint}';
+
+      @if ($i < $grid-columns) {
+        $grid-offset-class-list: $grid-offset-class-list + ', ';
+      }
+      .offset-#{$i}\@#{$breakpoint} {
+        --offset: #{$i};
+      }
+    }
+
+    #{$grid-offset-class-list} {
+      margin-left: calc(
+        (
+            (
+                100% - (var(--grid-columns) - var(--gap-modifier, 1)) *
+                  var(--sub-gap-x)
+              ) * var(--offset) / var(--grid-columns)
+          ) + (var(--offset) + var(--offset-modifier, 0)) * var(--sub-gap-x)
+      );
+    }
+
+    .offset-0\@#{$breakpoint} {
+      margin-left: 0;
+    }
+
+    @media not all and (min-resolution: 0.001dpcm) {
+      @supports (not (translate: none)) {
+        .offset-0\@#{$breakpoint} {
+          margin-left: var(--gap-x);
+        }
+      }
+    }
+  }
+}

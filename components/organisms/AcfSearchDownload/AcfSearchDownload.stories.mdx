@@ -1,0 +1,36 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfSearchDownload from './'
+
+<Meta
+  title="Components/Organisms/AcfSearchDownload"
+  component={AcfSearchDownload}
+/>
+
+# Component
+
+Use this to display the search + download component
+
+<Canvas>
+  <Story name="Component">
+    <AcfSearchDownload
+      {...{
+        form_heading: 'Find your product',
+        _form_heading: 'field_6191f6b5419ed',
+        form_footnote:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        _form_footnote: 'field_6191f6cd419ee',
+        section_heading: 'See our entire product catalog',
+        _section_heading: 'field_6191f6da419ef',
+        section_copy:
+          'Temperature, humidity, and pressure monitoring solutions and services.',
+        _section_copy: 'field_6191f6ef419f0',
+        section_cta: {
+          title: 'See Catalog',
+          url: 'https://dicksondata.com/',
+          target: ''
+        },
+        _section_cta: 'field_6191f713419f1'
+      }}
+    />
+  </Story>
+</Canvas>

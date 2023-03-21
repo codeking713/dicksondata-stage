@@ -1,0 +1,155 @@
+@import '@/styles/variables';
+
+.main {
+  display: flex;
+  flex-direction: row;
+  // flex-wrap: wrap;
+  // margin: auto;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: -120px;
+  // background-color: aquamarine;
+}
+
+.changeForm {
+  flex: 5;
+  align-items: center;
+  justify-content: center;
+  // width: 50%;
+  margin: auto;
+  // height: 20vh;
+  float: left;
+  // background-color: bisque;
+
+  div {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.forgetForm {
+  flex: 5;
+  align-self: center;
+  justify-self: center;
+  margin: auto;
+  // width: 50%;
+  // height: 20vh;
+  float: right;
+  // background-color: cadetblue;
+
+  div {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.heading {
+  display: block;
+}
+
+.formContainer {
+  flex: auto;
+  padding: 10%;
+  margin-left: 5%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  button {
+    margin-top: 5%;
+    width: 179px;
+    padding: 15px 0;
+    border-radius: $border-radius--high;
+    border: transparent;
+    background-color: $color--brand-blue;
+    color: $color--white;
+  }
+}
+
+.vl {
+  display: inline-block;
+  border-left: 0.1px dotted black;
+  height: 450px;
+  margin-bottom: 30px;
+}
+
+.container {
+  margin-top: 40px;
+}
+
+@media (max-width: 550px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .formContainer {
+      margin: auto;
+      padding: 0%;
+      width: 80vw;
+    }
+
+    button {
+      justify-self: center;
+      align-self: center;
+    }
+
+    .changeForm {
+      justify-self: center;
+      align-self: center;
+      // margin: auto;
+      // margin-left: -2%;
+      padding: 0%;
+    }
+  }
+
+  .forgetForm {
+    justify-self: center;
+    align-self: center;
+    margin-top: 15%;
+  }
+
+  .formContainer {
+    flex: auto;
+    padding: 0;
+    margin-left: 0%;
+  }
+
+  .textfield {
+    //   width: 80vw;
+    //   margin-left: -12%;
+    //   // margin-right: 20%;
+
+    //   // margin-left: auto;
+    //   // margin-right: -25%;
+  }
+
+  .vl {
+    display: none;
+  }
+
+  .heading {
+    display: block;
+    margin-left: 25%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    margin-top: -150px;
+  }
+
+  .container {
+    margin-top: 25%;
+  }
+}
+
+@media (max-width: 320px) {
+  .main {
+    margin-top: -120px;
+  }
+}

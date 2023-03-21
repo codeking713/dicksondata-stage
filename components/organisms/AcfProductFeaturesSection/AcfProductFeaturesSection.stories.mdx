@@ -1,0 +1,31 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfProductFeaturesSection from './'
+
+<Meta
+  title="Components/Organisms/AcfProductFeaturesSection"
+  component={AcfProductFeaturesSection}
+/>
+
+# Component
+
+Use this to display the product feature section on a page
+
+<Canvas>
+  <Story name="Component">
+    <AcfProductFeaturesSection
+      heading="Our products have one purpose - accurate monitoring"
+      copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper elementum egestas. Quisque viverra augue vestibulum pellentesque hendrerit. "
+      items={[
+        {
+          title: 'Next-Generation Technology'
+        },
+        {
+          title: 'Reliable'
+        },
+        {
+          title: 'Scalable'
+        }
+      ]}
+    />
+  </Story>
+</Canvas>

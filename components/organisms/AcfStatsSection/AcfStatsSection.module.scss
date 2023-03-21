@@ -1,0 +1,74 @@
+@import '@/styles/variables';
+@import '@/styles/grid';
+
+.section {
+  color: $color--gray-090;
+  position: relative;
+  padding-top: $padding--tb;
+  padding-bottom: $padding--tb;
+}
+
+.section__text,
+.section__tiles {
+  position: relative;
+  z-index: $z-index--stats-section-text;
+}
+
+.section__text {
+  max-width: 50rem;
+  line-height: 1.9em;
+  display: grid;
+}
+
+.section__text__copy {
+  margin-top: $margin--tb-mobile;
+  font-weight: $font--heading--semibold;
+  font-size: 1.875em;
+  line-height: 1.31em;
+}
+
+.section__bgimage {
+  position: absolute;
+  right: 0;
+}
+
+.section__tiles {
+  max-width: 70rem;
+  margin-top: $margin--tb-desktop;
+}
+
+.section__tiles__header {
+  &::before {
+    position: absolute;
+    content: ' ';
+    height: 45px;
+    background-color: $color--sky-blue-100;
+    width: 3px;
+  }
+}
+
+.section__tiles__header__main {
+  font-size: 4.0625em;
+  font-weight: $font--heading--semibold;
+  margin-left: $margin--lr-desktop;
+  line-height: 0.6616;
+}
+
+.section__tiles__header__subscript {
+  font-size: 2.25em;
+  font-weight: $font--heading--semibold;
+  line-height: 1.5625em;
+}
+
+.section__tiles__description {
+  font-size: 1.875em;
+  line-height: 1.25em;
+  margin-left: $margin--lr-desktop;
+}
+
+@media (max-width: $media--desktop) {
+  .section__bgimage {
+    max-width: 30rem;
+    object-position: right;
+  }
+}

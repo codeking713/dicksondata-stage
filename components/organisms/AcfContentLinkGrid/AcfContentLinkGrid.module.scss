@@ -1,0 +1,126 @@
+@import '@/styles/variables';
+
+.outer {
+  background: $color--gray-010;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container__sectionhead {
+  max-width: 26rem;
+  padding: 7rem $padding--tb 0 0;
+}
+
+.container__links {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: $margin--tb-mobile--child;
+  row-gap: $padding--tb--lg;
+  padding: 3rem;
+  flex: 1;
+}
+
+.container__links__link {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: start;
+  text-decoration: none;
+
+  &:hover {
+    .container__links__link__image {
+      transform: scale(1.1);
+    }
+
+    .container__links__link__text {
+      color: $color--brand-blue-070;
+    }
+  }
+}
+
+.container__links__link__image {
+  width: 6rem;
+  height: 6rem;
+  padding: 0.425rem;
+  border: 1px solid $color--gray-050;
+  border-radius: $gutter-horizontal;
+  margin-left: $margin--lr-mobile;
+  margin-right: $font--size--label;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.container__links__link__image__img {
+  width: 100%;
+  height: 100%;
+  border-radius: $gutter-horizontal;
+  overflow: hidden;
+  position: relative;
+}
+
+.container__links__link__text {
+  font-size: $font--size--heading;
+  font-weight: $font--body--bold;
+  color: $color--brand-blue-090;
+  padding-left: $padding--lr-mobile;
+  transition: color 0.2s ease;
+}
+
+@media (min-width: 48rem) and (max-width: 75rem) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container__sectionhead {
+    padding: unset;
+    padding-top: $padding--tb;
+    text-align: center;
+
+    h2 {
+      &::after {
+        align-self: center;
+      }
+    }
+  }
+
+  .container__links {
+    margin-top: $padding--tb;
+    column-gap: 3.5rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .container {
+    display: block;
+  }
+
+  .container__sectionhead {
+    margin-left: $padding--lr-mobile;
+    padding: unset;
+  }
+
+  .container__links {
+    display: block;
+    padding: unset;
+    padding-top: $padding--tb;
+  }
+
+  .container__links__link {
+    &:not(:last-child) {
+      margin-bottom: $padding--tb;
+    }
+  }
+}
+
+@media (max-width: 26rem) {
+  .container__sectionhead {
+    max-width: 22rem;
+  }
+}

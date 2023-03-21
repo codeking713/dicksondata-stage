@@ -1,0 +1,26 @@
+@import '@/styles/variables';
+@import '@/styles/grid';
+
+.hit {
+  margin-bottom: 4rem;
+}
+
+.hit__cta {
+  height: fit-content;
+  width: fit-content;
+
+  @media (max-width: $media--desktop) {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.hit__text {
+  line-height: 1.43rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+}

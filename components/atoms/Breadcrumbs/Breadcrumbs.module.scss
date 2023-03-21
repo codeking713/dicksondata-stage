@@ -1,0 +1,23 @@
+@import '@/styles/variables';
+
+.breadcrumbs {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1rem;
+}
+
+.breadcrumbs__breadcrumb {
+  @media (max-width: $media--tablet) {
+    max-width: 15rem;
+  }
+}
+
+.breadcrumbs__breadcrumb__sep {
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+}
+
+.breadcrumbs__breadcrumb__link {
+  color: $color--brand-blue;
+}

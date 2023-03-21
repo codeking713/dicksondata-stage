@@ -1,0 +1,23 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import ProductPrice from './'
+
+<Meta title="Components/Molecules/ProductPrice" component={ProductPrice} />
+
+# ProductPrice
+
+Product Price component.
+
+<Canvas>
+  <Story name="Product Price with discount">
+    <ProductPrice
+      name="Product Price"
+      regularPrice={1000}
+      salePrice={500}
+      onSale={true}
+      currency="$"
+    />
+  </Story>
+  <Story name="Product Price without discount">
+    <ProductPrice name="Product Price" regularPrice={1000} currency="$" />
+  </Story>
+</Canvas>

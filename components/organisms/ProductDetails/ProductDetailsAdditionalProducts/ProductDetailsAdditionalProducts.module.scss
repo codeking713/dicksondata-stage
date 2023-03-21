@@ -1,0 +1,45 @@
+@import '@/styles/variables';
+
+.main {
+  @include force-fullwidth;
+}
+
+.main__inner {
+  @include container;
+}
+
+.main__inner__heading {
+  text-align: center;
+  font-weight: $font--heading--bold;
+}
+
+.main__inner__products {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: 0;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+}
+
+.main__inner__products__product {
+  position: relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  width: 300px;
+  margin: 0.5rem;
+}

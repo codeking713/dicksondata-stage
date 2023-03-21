@@ -1,0 +1,60 @@
+@import '@/styles/variables';
+
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: $z-index--languageselect;
+}
+
+.arrowContainer {
+  width: 10px;
+  height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrowUp {
+  transition: transform 0.1s linear;
+}
+
+.arrowDown {
+  transform: rotate(180deg);
+  transition: transform 0.1s linear;
+}
+
+.formatOptionLabel {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin: 0 1rem;
+  }
+
+  .label {
+    color: #fff;
+  }
+}
+
+@media (max-width: $media--tablet) {
+  .container {
+    position: relative;
+    z-index: 4;
+    font-size: 0.9rem;
+
+    > div {
+      > div {
+        > div {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .formatOptionLabel {
+    img {
+      display: none;
+    }
+  }
+}

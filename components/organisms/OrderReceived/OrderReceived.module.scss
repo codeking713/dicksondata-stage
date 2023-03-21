@@ -1,0 +1,121 @@
+@import '@/styles/variables';
+@import '@/styles/grid';
+
+.section {
+  background-color: #f6f9fa;
+}
+
+.section--loader {
+  position: relative;
+}
+
+.section__confirmation {
+  background-color: $color--white;
+  padding: 4rem 6rem;
+
+  @media (max-width: $media--desktop) {
+    padding: 4rem 1rem;
+  }
+}
+
+.section__confirmation__header {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  @media (max-width: $media--desktop) {
+    margin-bottom: 1rem;
+  }
+}
+
+.section__confirmation__header__icon {
+  width: 50px;
+  margin-bottom: 1rem;
+}
+
+.section__confirmation__header__icon--success {
+  fill: $color--aqua-100;
+}
+
+.section__confirmation__header__icon--warning {
+  fill: $color--badge;
+}
+
+.section__confirmation__header__heading {
+  font-weight: $font--heading--semibold;
+  font-size: 1.75rem;
+}
+
+.section__confirmation__header__subheading {
+  font-weight: $font--heading--semibold;
+  font-size: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+.section__confirmation__header__subheading--order {
+  color: $color--sky-blue-100;
+}
+
+.section__confirmation__header__description {
+  font-weight: $font--heading--semibold;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.75rem;
+
+  @media (max-width: $media--tablet) {
+    width: 100%;
+  }
+}
+
+.section__confirmation__header__description--email {
+  color: $color--sky-blue-100;
+}
+
+.section__confirmation__order__header {
+  font-size: 1.375rem;
+  font-weight: $font--heading--semibold;
+  margin-bottom: 1rem;
+}
+
+.section__confirmation__order__lines {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: $font--heading--semibold;
+}
+
+.section__confirmation__order__lines__value {
+  font-weight: $font--heading--bold;
+}
+
+.section__confirmation__address__item {
+  display: inline-block;
+  margin-right: 2rem;
+
+  @media (max-width: $media--desktop) {
+    margin-left: unset;
+    margin-right: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+.section__confirmation__cta {
+  text-align: right;
+}
+
+.section__confirmation__cta__primary {
+  margin-right: 1rem;
+
+  @media (max-width: $media--desktop) {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.section__confirmation__cta__secondary {
+  @media (max-width: $media--desktop) {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

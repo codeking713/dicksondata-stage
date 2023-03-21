@@ -1,0 +1,38 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfRepeatingImageCopyColSection from './'
+
+<Meta
+  title="Components/Organisms/AcfRepeatingImageCopyColSection"
+  component={AcfRepeatingImageCopyColSection}
+/>
+
+# Component
+
+Use this to display the repeating image copy col section on a page
+
+<Canvas>
+  <Story name="Component">
+    <AcfRepeatingImageCopyColSection
+      heading="Heading goes here"
+      copy="Over 100 years of excellence in helping our customers achive their environment compliance monitoring needs"
+      items={[
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        },
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        },
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        },
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        }
+      ]}
+    />
+  </Story>
+</Canvas>

@@ -1,0 +1,61 @@
+@import './variables';
+
+.checkbox {
+  margin-bottom: 60px;
+}
+
+.checkbox input {
+  margin-right: 12px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container section {
+  width: 100%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  div {
+    margin-bottom: 2.5rem;
+  }
+
+  button {
+    width: 179px;
+    padding: 15px 0;
+    border-radius: $border-radius--high;
+    border: transparent;
+    background-color: $color--brand-blue;
+    color: $color--white;
+  }
+}
+
+.signInCta {
+  margin-bottom: 92px;
+}
+
+.link {
+  color: $color--gray-050;
+}
+
+.forgotPassword {
+  margin-bottom: 24px;
+}
+
+@media (max-width: $media--tablet) {
+  .container {
+    flex-direction: column;
+  }
+
+  .signInCta {
+    margin-bottom: 40px;
+    margin-top: 24px;
+  }
+}

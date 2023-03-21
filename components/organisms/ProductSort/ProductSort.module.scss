@@ -1,0 +1,78 @@
+@import '@/styles/variables';
+
+.sort {
+  // margin-top: 0.25rem;
+  text-align: right;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.sort__button {
+  margin-bottom: 0.75rem;
+  background-color: #313f49 !important;
+  color: $color--white;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.sort__button--active {
+  background-color: $color--sky-blue-100 !important;
+}
+
+.sort__button__icon {
+  margin-right: 0.5rem;
+}
+
+.sort__options {
+  padding: 1rem 2rem;
+  box-shadow: 1px 0 10px 2px rgb(0 0 0 / 10%);
+  width: fit-content;
+  text-align: left;
+  position: absolute;
+  z-index: 2;
+  background-color: $color--white;
+  right: 0;
+}
+
+.sort__options__option {
+  cursor: pointer;
+  margin: 1rem 1rem 1rem 1rem !important;
+  white-space: nowrap;
+  display: flex !important;
+  font-size: 1.125rem !important;
+  padding: 0 !important;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  border-bottom: none !important;
+}
+
+.sort__options__option__checked {
+  &::before {
+    content: '\2713';
+    position: absolute;
+    left: 20px;
+    color: $color--brand-blue;
+  }
+}
+
+.sort__options__option__notch {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.sort__options__option__notch--border {
+  top: -18px;
+  border-color: transparent transparent #fff transparent;
+}

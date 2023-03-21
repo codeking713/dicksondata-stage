@@ -1,0 +1,21 @@
+@import '@/styles/variables';
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header__text {
+  font-size: 2.125rem;
+  font-weight: $font--heading--bold;
+  line-height: 2.5125rem;
+  margin-left: 1.5rem;
+  margin-top: 0;
+  width: 80%;
+}
+
+.header__image {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}

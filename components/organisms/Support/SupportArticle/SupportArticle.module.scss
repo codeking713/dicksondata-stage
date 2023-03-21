@@ -1,0 +1,24 @@
+@import '@/styles/variables';
+
+.articles__header {
+  p {
+    font-size: 1.875rem;
+    margin-bottom: 0.4rem;
+  }
+
+  color: $color--brand-blue;
+}
+
+.articles__content {
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,64 @@
+@import '@/styles/variables';
+
+.container {
+  position: relative;
+}
+
+.section {
+  @include container;
+
+  display: grid;
+  grid-gap: 2rem;
+}
+
+.section__media {
+  position: relative;
+  width: 100%;
+  padding-top: 20rem;
+}
+
+.section__text {
+  max-width: 56rem;
+}
+
+.section__text__title,
+.section__text__body {
+  + .section__text__button {
+    margin-top: 1.25rem;
+  }
+}
+
+@media (min-width: $media--tablet) {
+  .section {
+    display: flex;
+    align-items: center;
+
+    &.section--left {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .section--left {
+    flex-direction: row-reverse;
+
+    .section__text {
+      + .section__media {
+        margin-left: 0;
+        margin-right: 3rem;
+      }
+    }
+  }
+
+  .section__text {
+    flex: 1;
+
+    + .section__media {
+      margin-left: 3rem;
+    }
+  }
+
+  .section__media {
+    width: 40%;
+    padding-top: 20rem;
+  }
+}

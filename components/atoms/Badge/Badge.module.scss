@@ -1,0 +1,22 @@
+@import '@/styles/variables';
+
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  height: 27px;
+  font-size: 0.875rem;
+  color: $color--white;
+  width: 100px;
+  background-color: $color--badge;
+}
+
+.discount {
+  font-weight: 600;
+  min-width: 61px;
+}
+
+.smallSize {
+  height: 18px;
+}

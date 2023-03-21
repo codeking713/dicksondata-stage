@@ -1,0 +1,52 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import Footer from './'
+
+<Meta title="Components/Organisms/Footer" component={Footer} />
+
+# Component
+
+Use this to display the footer.
+
+<Canvas>
+  <Story name="Component">
+    <Footer
+      menu={[
+        {
+          label: 'Home',
+          path: '/',
+          target: null
+        },
+        {
+          label: 'Blog',
+          path: '/blog',
+          target: null
+        },
+        {
+          label: 'About',
+          path: '/about/',
+          target: null
+        },
+        {
+          label: 'Contact',
+          path: '/contact/',
+          target: null
+        },
+        {
+          label: 'Team',
+          path: '/team',
+          target: null
+        }
+      ]}
+      social={{
+        facebook: 'https://www.facebook.com/DAP',
+        instagram: 'https://instagram.com/DAP',
+        linkedIn: 'https://www.linkedin.com/company/DAP-llc-/',
+        mySpace: '',
+        pinterest: '',
+        twitter: 'https://twitter.com/DAP',
+        wikipedia: '',
+        youTube: ''
+      }}
+    />
+  </Story>
+</Canvas>

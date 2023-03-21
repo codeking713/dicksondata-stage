@@ -1,0 +1,41 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfImageValuePropSection from './'
+
+<Meta
+  title="Components/Organisms/AcfImageValuePropSection"
+  component={AcfImageValuePropSection}
+/>
+
+# Component
+
+Use this to display the image value prop section on a page
+
+<Canvas>
+  <Story name="Component">
+    <AcfImageValuePropSection
+      heading="Over 100 years of excellence in helping our customers achive their environment compliance monitoring needs"
+      items={[
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        },
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        },
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        },
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        }
+      ]}
+      backgroundMeta={{
+        altText: 'alt text',
+        mediaItemUrl: '#'
+      }}
+    />
+  </Story>
+</Canvas>

@@ -1,0 +1,39 @@
+@import '@/styles/variables';
+
+.faq {
+  background: $color--gray-010;
+}
+
+.faq__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq__container__heading {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.faq__container__wrapper {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.faq__container__wrapper div {
+  mix-blend-mode: darken;
+}
+
+.faq__container__wrapper div button {
+  border-top: 1px solid $color--gray-020;
+}
+
+.faq__container__wrapper div button span svg {
+  fill: black;
+}
+
+.faq__container__button {
+  width: 16rem;
+}

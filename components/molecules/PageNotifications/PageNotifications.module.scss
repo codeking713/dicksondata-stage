@@ -1,0 +1,53 @@
+@import '@/styles/variables';
+
+.notification {
+  font-size: 1rem;
+  text-align: left;
+  padding: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.notification--error {
+  background: $color--red-040;
+  border: 1px solid $color--red-100;
+  color: $color--red-100;
+}
+
+.notification--success {
+  background: $color--aqua-010;
+  border: 1px solid $color--aqua-100;
+  color: $color--aqua-100;
+}
+
+.notification--warning {
+  background: $color--badge-010;
+  border: 1px solid $color--badge;
+  color: $color--badge;
+}
+
+.notification--info {
+  background: $color--gray-010;
+  border: 1px solid $color--gray-070;
+  color: $color--gray-070;
+}
+
+.notification__icon {
+  flex-basis: 25px;
+  flex-shrink: 0;
+}
+
+.notification__content {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 0.2rem;
+}
+
+.notification__close {
+  flex-basis: 25px;
+  flex-shrink: 0;
+  cursor: pointer;
+}

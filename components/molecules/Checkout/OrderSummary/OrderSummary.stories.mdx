@@ -1,0 +1,155 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import OrderSummary from './'
+
+<Meta title="Components/Molecules/OrderSummary" component={OrderSummary} />
+
+# OrderSummary
+
+Order Summary component.
+
+<Canvas>
+  <Story name="Order summary with products">
+    <OrderSummary
+      showProducts={true}
+      cart={{
+        totalProductsPrice: 1000,
+        appliedCoupons: [{code: 'abc', discountAmount: '5', discountTax: '0'}],
+        currency: '$',
+        subtotal: 2652,
+        discount: 3,
+        products: [
+          {
+            productId: 1,
+            name: 'Product name 1',
+            image: {
+              sourceUrl:
+                'https://dicksondata.com/wp-content/uploads/2019/03/TWE-Glass-Bottle-Left-Angle.jpg',
+              srcSet:
+                'https://dicksondata.com/wp-content/uploads/2019/03/TWE-Glass-Bottle-Left-Angle.jpg',
+              title: 'Product name 1'
+            },
+            cartKey: '1',
+            regularPrice: 5119,
+            salePrice: 375,
+            onSale: true,
+            totalPrice: 375,
+            qty: 1,
+            sku: 'PW864',
+            shortDescription:
+              'All of our pressure data loggers feature remote downloads, IP ratings, and a variety of ranges. '
+          },
+          {
+            productId: 2,
+            name: 'Product name 2',
+            image: {
+              sourceUrl:
+                'https://dicksondata.com/wp-content/uploads/2019/03/DWE-RTHM-S-Temp-Left-Angle.jpg',
+              srcSet:
+                'https://dicksondata.com/wp-content/uploads/2019/03/DWE-RTHM-S-Temp-Left-Angle.jpg',
+              title: 'Product name 2'
+            },
+            cartKey: '2',
+            regularPrice: 4000,
+            onSale: false,
+            totalPrice: 4000,
+            qty: 3,
+            sku: 'PW865',
+            shortDescription:
+              'All of our pressure data loggers feature remote downloads, IP ratings, and a variety of ranges. '
+          },
+          {
+            productId: 3,
+            name: 'Product name 3',
+            image: {
+              sourceUrl:
+                'https://dicksondata.com/wp-content/uploads/2019/03/dsb_transparent.jpg',
+              srcSet:
+                'https://dicksondata.com/wp-content/uploads/2019/03/dsb_transparent.jpg',
+              title: 'Product name 3'
+            },
+            cartKey: '3',
+            regularPrice: 5119,
+            onSale: false,
+            totalPrice: 5119,
+            qty: 5,
+            sku: 'PW867',
+            shortDescription:
+              'All of our pressure data loggers feature remote downloads, IP ratings, and a variety of ranges. '
+          }
+        ]
+      }}
+    />
+  </Story>
+  <Story name="Order summary without products">
+    <OrderSummary
+      showProducts={false}
+      cart={{
+        totalProductsPrice: 1000,
+        appliedCoupons: [{code: 'abc', discountAmount: '5', discountTax: '0'}],
+        currency: '$',
+        subtotal: 2652,
+        discount: 3,
+        products: [
+          {
+            productId: 1,
+            name: 'Product name 1',
+            image: {
+              sourceUrl:
+                'https://dicksondata.com/wp-content/uploads/2019/03/TWE-Glass-Bottle-Left-Angle.jpg',
+              srcSet:
+                'https://dicksondata.com/wp-content/uploads/2019/03/TWE-Glass-Bottle-Left-Angle.jpg',
+              title: 'Product name 1'
+            },
+            cartKey: '1',
+            regularPrice: 5119,
+            salePrice: 375,
+            onSale: true,
+            totalPrice: 375,
+            qty: 1,
+            sku: 'PW864',
+            shortDescription:
+              'All of our pressure data loggers feature remote downloads, IP ratings, and a variety of ranges. '
+          },
+          {
+            productId: 2,
+            name: 'Product name 2',
+            image: {
+              sourceUrl:
+                'https://dicksondata.com/wp-content/uploads/2019/03/DWE-RTHM-S-Temp-Left-Angle.jpg',
+              srcSet:
+                'https://dicksondata.com/wp-content/uploads/2019/03/DWE-RTHM-S-Temp-Left-Angle.jpg',
+              title: 'Product name 2'
+            },
+            cartKey: '2',
+            regularPrice: 4000,
+            onSale: false,
+            totalPrice: 4000,
+            qty: 3,
+            sku: 'PW865',
+            shortDescription:
+              'All of our pressure data loggers feature remote downloads, IP ratings, and a variety of ranges. '
+          },
+          {
+            productId: 3,
+            name: 'Product name 3',
+            image: {
+              sourceUrl:
+                'https://dicksondata.com/wp-content/uploads/2019/03/dsb_transparent.jpg',
+              srcSet:
+                'https://dicksondata.com/wp-content/uploads/2019/03/dsb_transparent.jpg',
+              title: 'Product name 3'
+            },
+            cartKey: '3',
+            regularPrice: 5119,
+            onSale: false,
+            totalPrice: 5119,
+            qty: 5,
+            sku: 'PW867',
+            shortDescription:
+              'All of our pressure data loggers feature remote downloads, IP ratings, and a variety of ranges. '
+          }
+        ]
+      }}
+    />
+  </Story>
+</Canvas>

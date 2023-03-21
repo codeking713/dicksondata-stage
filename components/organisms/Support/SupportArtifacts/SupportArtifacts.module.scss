@@ -1,0 +1,44 @@
+@import '@/styles/variables';
+
+.artifacts {
+  background-color: $color--gray-010;
+  padding: 1.5rem;
+  font-size: 0.875rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 130px;
+}
+
+.artifacts__section__heading {
+  text-transform: uppercase;
+}
+
+.artifacts__section__content {
+  list-style-type: none;
+  padding-left: 0;
+  color: $color--brand-blue;
+}
+
+.artifacts__section__manuals {
+  margin-top: 2rem;
+}
+
+.artifacts__section__content__link {
+  color: $color--brand-blue;
+  display: flex;
+  align-items: center;
+
+  svg {
+    transform: scale(0.7);
+    margin-right: 0.5rem;
+  }
+}
+
+.artifacts__section__content__item {
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

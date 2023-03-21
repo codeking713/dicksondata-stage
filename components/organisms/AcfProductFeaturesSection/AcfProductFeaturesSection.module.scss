@@ -1,0 +1,19 @@
+@import '@/styles/variables';
+@import '@/styles/grid';
+
+.section {
+  background-color: $color--navy-blue-010;
+  color: $color--gray-090;
+}
+
+.section__items {
+  margin-top: $margin--tb-desktop;
+  max-width: 54rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: $media--desktop) {
+    margin-top: $margin--tb-mobile;
+    max-width: 15rem;
+  }
+}

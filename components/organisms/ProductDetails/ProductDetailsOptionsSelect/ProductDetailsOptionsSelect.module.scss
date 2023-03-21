@@ -1,0 +1,32 @@
+@import '@/styles/variables';
+
+.selections__fieldset {
+  + .selections__fieldset {
+    margin-top: 1.5rem;
+  }
+}
+
+.selections__fieldset__label {
+  text-transform: uppercase;
+  font-size: 0.9375em;
+  line-height: 1em;
+  font-weight: $font--heading--bold;
+  color: $color--gray-100;
+
+  + .selections__fieldset__select,
+  + .selections__fieldset__input {
+    margin-top: 0.25rem;
+  }
+}
+
+.selections__fieldset__select {
+  @include select-dropdown;
+}
+
+@media (min-width: $media--desktop) {
+  .selections {
+    + .selections {
+      margin-top: 0;
+    }
+  }
+}

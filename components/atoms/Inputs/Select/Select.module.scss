@@ -1,0 +1,100 @@
+@import '@/styles/variables';
+
+.inputgrp--dark {
+  .inputgrp__main__input {
+    background-image: $image--chevron-down--white;
+    color: $color--white;
+    background-color: $color--gray-100;
+    appearance: none;
+  }
+
+  .inputgrp__main__label {
+    color: $color--gray-030;
+    z-index: 1;
+  }
+
+  .inputgrp__description {
+    color: $color--gray-020;
+  }
+
+  .inputgrp__main__icon {
+    color: $color--gray-020;
+  }
+}
+
+.inputgrp__main {
+  position: relative;
+  height: 3.75rem;
+}
+
+.inputgrp__main__input {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem 0.75rem 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid $color--gray-030;
+  background-color: transparent;
+  color: $color--gray-100;
+  font-size: 1.0625rem;
+  appearance: none;
+  z-index: 1;
+
+  &.inputgrp__main__input--hasvalue,
+  &:focus {
+    + .inputgrp__main__label {
+      transform: translateY(-1.5rem) scale(0.8);
+    }
+  }
+
+  &:focus {
+    outline: 0;
+    border-bottom-color: $color--sky-blue-100;
+  }
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: $image--chevron-down;
+  background-size: 10px;
+  background-position: calc(100% - 10px) 35px;
+  background-repeat: no-repeat;
+}
+
+.inputgrp__main__label {
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  color: $color--gray-080;
+  transition: transform 0.15s ease-in-out;
+  transform-origin: left center;
+}
+
+.inputgrp__main__label__asterisk {
+  color: $color--red-100;
+}
+
+.inputgrp__main__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  right: 0.75rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color--gray-080;
+}
+
+.inputgrp__description {
+  font-size: 0.875rem;
+  line-height: 1.25em;
+  font-style: italic;
+  color: $color--gray-080;
+}

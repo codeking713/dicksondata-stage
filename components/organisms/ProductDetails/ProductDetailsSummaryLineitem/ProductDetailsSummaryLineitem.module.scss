@@ -1,0 +1,102 @@
+@import '@/styles/variables';
+
+.productline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  &.productline--hidden {
+    display: none;
+  }
+
+  + .productline {
+    margin-top: 0.75rem;
+  }
+}
+
+.productline__info {
+  flex: 1;
+
+  + .productline__price {
+    margin-left: 0.5rem;
+  }
+}
+
+.productline__info__name,
+.productline__info__value {
+  font-size: 14px;
+  line-height: 1.125em;
+}
+
+.productline__info__name {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.125em;
+  font-weight: $font--heading--bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.productline__info__value--full {
+  width: 100%
+}
+
+.productline__info__value__name {
+  display: flex;
+  width: 100%;
+}
+
+.productline__info__value__name--spacer {
+  flex-grow: 1;
+}
+
+.productline__info__name__remove {
+  @include reset-button;
+
+  background-color: $color--gray-030;
+  border-radius: 10rem;
+  min-width: 1rem;
+  height: 1rem;
+  font-size: 14px;
+  line-height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productline__info__value {
+  display: flex;
+  align-items: center;
+  margin-top: 0.25rem;
+  font-size: 14px;
+
+  &::before {
+    content: '';
+    width: 0.75rem;
+    height: 0.75rem;
+    align-self: flex-start;
+    border-left: 1px dashed $color--gray-050;
+    border-bottom: 1px dashed $color--gray-050;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+}
+
+.productline__info__value__price {
+  margin-left: auto;
+  text-align: right;
+  font-weight: 600;
+}
+
+.productline__info__value__price--discount {
+  text-decoration: line-through;
+  margin-right: 0.5rem;
+  color: $color--gray-050;
+}
+
+.productline__info__value__price--gap {
+  margin-right: 1rem;
+}

@@ -1,0 +1,40 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfStatsSection from './'
+
+<Meta
+  title="Components/Organisms/AcfStatsSection"
+  component={AcfStatsSection}
+/>
+
+# Component
+
+Use this to display the stats section on a page
+
+<Canvas>
+  <Story name="Component">
+    <AcfStatsSection
+      copy="Over 100 years of excellence in helping our customers achive their environment compliance monitoring needs"
+      stats={[
+        {
+          value: '80',
+          valueSubscript: '%',
+          description: 'of Fortune 100 Companies Served'
+        },
+        {
+          value: '3',
+          valueSubscript: 'X',
+          description: 'Saving with Monitoring Optimization'
+        },
+        {
+          value: '200',
+          valueSubscript: '+',
+          description: 'End Users Served'
+        }
+      ]}
+      backgroundMeta={{
+        altText: 'alt text',
+        mediaItemUrl: '#'
+      }}
+    />
+  </Story>
+</Canvas>

@@ -1,0 +1,55 @@
+@import '@/styles/variables';
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__button {
+  align-items: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  flex-shrink: 0;
+
+  &:disabled {
+    .section__button__icon {
+      color: $color--gray-050;
+    }
+  }
+}
+
+.section__button--hide {
+  visibility: hidden;
+}
+
+.section__button__icon {
+  color: $color--brand-blue;
+  cursor: pointer;
+
+  &:hover {
+    color: $color--navy-blue-100;
+  }
+}
+
+.section__textbox {
+  background: transparent;
+  border: none;
+  text-align: center;
+  border-bottom: 1px solid $color--gray-050;
+  padding: 0.1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

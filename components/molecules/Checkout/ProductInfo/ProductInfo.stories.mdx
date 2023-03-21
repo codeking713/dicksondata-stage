@@ -1,0 +1,61 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import ProductInfo from './'
+
+<Meta title="Components/Molecules/ProductInfo" component={ProductInfo} />
+
+# ProductInfo
+
+ProductInfo component.
+
+<Canvas>
+  <Story name="Product Info without image">
+    <ProductInfo
+      product={{
+        productId: 1,
+        name: 'Product name 1',
+        image: {
+          sourceUrl:
+            'https://dicksondata.com/wp-content/uploads/2019/03/TWE-Glass-Bottle-Left-Angle.jpg',
+          srcSet:
+            'https://dicksondata.com/wp-content/uploads/2019/03/TWE-Glass-Bottle-Left-Angle.jpg',
+          title: 'Product name 1'
+        },
+        cartKey: '1',
+        regularPrice: 5119,
+        salePrice: 375,
+        onSale: true,
+        totalPrice: 375,
+        qty: 1,
+        sku: 'PW864',
+        shortDescription:
+          'All of our pressure data loggers feature remote downloads, IP ratings, and a variety of ranges. '
+      }}
+    />
+  </Story>
+  <Story name="Product Info with image">
+    <ProductInfo
+      product={{
+        productId: 1,
+        name: 'Product name 1',
+        image: {
+          sourceUrl:
+            'https://dicksondata.com/wp-content/uploads/2019/03/TWE-Glass-Bottle-Left-Angle.jpg',
+          srcSet:
+            'https://dicksondata.com/wp-content/uploads/2019/03/TWE-Glass-Bottle-Left-Angle.jpg',
+          title: 'Product name 1'
+        },
+        cartKey: '1',
+        regularPrice: 5119,
+        salePrice: 375,
+        onSale: true,
+        totalPrice: 375,
+        qty: 1,
+        sku: 'PW864',
+        shortDescription:
+          'All of our pressure data loggers feature remote downloads, IP ratings, and a variety of ranges. '
+      }}
+      showImage={true}
+      showRemoveProduct={true}
+    />
+  </Story>
+</Canvas>

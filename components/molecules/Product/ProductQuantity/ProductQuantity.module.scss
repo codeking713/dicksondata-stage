@@ -1,0 +1,51 @@
+@import '@/styles/variables';
+
+.summary__inner__top__qty {
+  display: flex;
+}
+
+.summary__inner__top__qty__minus,
+.summary__inner__top__qty__plus {
+  padding: 0 0.5rem;
+  background-color: inherit;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color--black;
+  cursor: pointer;
+
+  svg {
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: inherit;
+    color: $color--brand-blue-100;
+  }
+}
+
+.summary__inner__top__qty--disabled {
+  cursor: not-allowed;
+
+  svg {
+    fill: $color--gray-030;
+  }
+}
+
+.summary__inner__top__qty__amount {
+  width: 3.125rem;
+  height: 3.5rem;
+  text-align: center;
+
+  &[type='number'] {
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+  }
+}

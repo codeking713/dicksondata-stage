@@ -1,0 +1,23 @@
+@import '@/styles/variables';
+
+.remove {
+  align-items: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: $color--gray-070;
+  cursor: pointer;
+
+  svg {
+    vertical-align: middle;
+  }
+
+  &:hover {
+    color: $color--gray-080;
+  }
+
+  &:disabled {
+    color: $color--gray-050;
+    cursor: default;
+  }
+}

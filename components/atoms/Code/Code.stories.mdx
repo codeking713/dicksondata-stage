@@ -1,0 +1,36 @@
+import {Meta, Story, Canvas} from '@storybook/addon-docs/blocks'
+
+import Code from '.'
+
+<Meta title="Components/Atoms/Code" component={Code} />
+
+# Code
+
+Use this component to display a code block.
+
+<Canvas>
+  <Story name="Component">
+    <Code
+      content="<p>this is a code block!</p>"
+      className="html custom-class"
+    />
+  </Story>
+</Canvas>
+
+## Controls
+
+Play around with `<Code />` props in the [Canvas tab of the Controls story](?path=/story/design-system-atoms-code--controls).
+
+export const Template = (args) => <Code {...args} />
+
+<Canvas>
+  <Story
+    name="Controls"
+    args={{
+      content: '<p>this is a code block!</p>',
+      className: 'html custom-class'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

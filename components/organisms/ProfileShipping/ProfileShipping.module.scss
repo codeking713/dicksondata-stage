@@ -1,0 +1,105 @@
+@import '@/styles/variables';
+
+.container__header {
+  display: flex;
+  padding: $padding--tb;
+  background: $color--brand-blue;
+  font-size: $font--size--heading;
+  font-weight: $font--heading--semibold;
+  color: $color--white;
+}
+
+.container__header--style {
+  margin-right: $padding--tb;
+}
+
+.container__header--style:hover {
+  cursor: pointer;
+}
+
+.container__header--style svg {
+  transform: rotate(180deg);
+}
+
+.container__note {
+  padding: $padding--tb;
+  font-size: $font--size--heading;
+  font-weight: $font--heading--semibold;
+  color: $color--gray-060;
+}
+
+.container__input--flex {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: $margin--lr-desktop;
+  align-items: end;
+}
+
+.container__form button {
+  border-radius: 10rem;
+  border: none;
+  padding: $padding--tb;
+  margin-right: $padding--tb;
+  width: 14rem;
+  margin-top: $margin--tb-mobile--child;
+  font-size: $font--size--heading;
+  font-weight: $font--heading--semibold;
+}
+
+.container__button--submit {
+  background-color: $color--aqua-080 !important;
+}
+
+.container__button--cancel {
+  color: $color--red-100 !important;
+  border-color: $color--red-100 !important;
+  background-color: transparent !important;
+  border-width: 0.125rem !important;
+  border-style: solid !important;
+}
+
+.container__form select {
+  margin-bottom: 0;
+}
+
+.container__form label {
+  top: 15% !important;
+}
+
+.container__form input:focus {
+  outline: none !important;
+}
+
+.container__form select:focus {
+  outline: none !important;
+}
+
+.container__error {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f44336;
+  color: white;
+  border-radius: 0.225rem;
+  padding: $padding--tb $padding--lr-mobile $padding--tb $padding--tb;
+  margin-top: $padding--tb;
+}
+
+.container__error svg {
+  fill: white;
+}
+
+.container__error--margin {
+  margin-left: $padding--lr-mobile;
+}
+
+.contianer__fields--margin {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: $media--tablet) {
+  .container__input--flex {
+    display: block !important;
+  }
+}

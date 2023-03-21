@@ -1,0 +1,129 @@
+@import '@/styles/variables';
+
+.products {
+  display: block;
+  margin-block-start: 2.2rem;
+  list-style: none;
+  padding-left: 0;
+
+  .product {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: $color--white;
+    margin-block-end: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    &__old_price {
+      font-size: 1.25rem;
+      text-decoration: line-through;
+      font-weight: 600;
+      margin-block-end: 0;
+    }
+
+    &__image {
+      max-width: 366px;
+    }
+
+    &__button {
+      color: $color--white;
+    }
+
+    &__container {
+      padding: 2.25rem;
+
+      &__button {
+        display: flex;
+        align-items: flex-end;
+      }
+
+      &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 2px solid $color--gray-003;
+        // background:
+        //   radial-gradient(
+        //     71.13% 100% at 50% 50%,
+        //     #fff 0%,
+        //     #f9f9f9 100%
+        //   );
+      }
+    }
+
+    &__excerpt {
+      margin-block-end: 2rem;
+
+      > ul {
+        padding-left: 0;
+
+        li {
+          list-style: none;
+          line-height: 1.75rem;
+
+          &::before {
+            content: '✔';
+            margin-inline-end: 1rem;
+            color: $color--brand-blue;
+          }
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__price {
+        display: flex;
+        align-items: center;
+
+        p {
+          font-size: 1.25rem;
+          color: $color--brand-blue;
+          margin: 0;
+          font-weight: 600;
+        }
+
+        .discount {
+          margin-inline-start: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.product__container__heading {
+  font-weight: $font--body--bold;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+
+@media (max-width: $media--desktop) {
+  .products {
+    .product {
+      grid-template-columns: 30% 70%;
+    }
+  }
+}
+
+@media (max-width: $media--phablet) {
+  .products {
+    .product {
+      display: inline-block;
+
+      &__button {
+        margin-block-start: 2rem;
+        width: 100%;
+      }
+
+      &__footer {
+        flex-wrap: wrap;
+
+        > div {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

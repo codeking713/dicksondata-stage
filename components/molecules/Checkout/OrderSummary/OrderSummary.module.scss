@@ -1,0 +1,131 @@
+@import '@/styles/variables';
+
+.summary {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: $color--white;
+
+  thead th {
+    padding-top: $padding--tb;
+    padding-bottom: $padding--tb;
+    font-weight: $font--heading--semibold;
+    font-size: 1.125rem;
+
+    @media (max-width: $media--tablet) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  tr {
+    border-bottom: 1px solid $color--gray-015;
+
+    td {
+      padding-top: $padding--tb;
+      padding-bottom: $padding--tb;
+      vertical-align: top;
+
+      &:first-child {
+        font-weight: $font--heading--semibold;
+        font-size: 1.125rem;
+      }
+
+      @media (max-width: $media--tablet) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+  }
+}
+
+.summary--cart {
+  thead th {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    font-weight: $font--heading--bold;
+
+    @media (max-width: $media--desktop) {
+      padding-left: 1.5rem;
+    }
+  }
+
+  tr {
+    td {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+
+      &:first-child {
+        padding-left: 3rem;
+      }
+
+      &:last-child {
+        padding-right: 3rem;
+      }
+
+      @media (max-width: $media--desktop) {
+        padding-left: 1.5rem;
+
+        &:first-child {
+          padding-left: 1.5rem;
+        }
+
+        &:last-child {
+          padding-right: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.summary--desktop {
+  @media (max-width: $media--tablet) {
+    display: none;
+  }
+}
+
+.summary--left {
+  text-align: left;
+}
+
+.summary--right {
+  text-align: right;
+}
+
+.summary__content {
+  color: $color--brand-blue;
+  font-weight: $font--heading--semibold;
+  font-size: 1.25rem !important;
+  text-align: right;
+}
+
+.summary__content__coupon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.summary__content__coupon__values {
+  margin-right: 1rem;
+}
+
+.summary__cell__note {
+  text-align: right;
+  font-size: 1rem;
+  padding-left: 2rem;
+  color: $color--gray-100;
+  font-weight: 400;
+}
+
+.summary__cell__shippingoptions {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  label {
+    display: inline-flex;
+  }
+}
+
+.summary__cell__shippingoptions__text {
+  font-size: 1rem;
+}

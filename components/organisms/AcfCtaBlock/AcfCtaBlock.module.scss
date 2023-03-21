@@ -1,0 +1,47 @@
+@import '@/styles/variables';
+
+.outer--dark {
+  background-color: $color--gray-100;
+  color: $color--white;
+
+  .container__head {
+    a {
+      color: $color--brand-blue-040;
+    }
+  }
+}
+
+.container__ctablock {
+  margin-top: 2rem;
+}
+
+.container__ctablock__ctaprimary,
+.container__ctablock__ctasecondary {
+  width: 100%;
+}
+
+.container__ctablock__ctaprimary {
+  + .container__ctablock__ctasecondary {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: $media--tablet) {
+  .container__ctablock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container__ctablock__ctaprimary,
+  .container__ctablock__ctasecondary {
+    width: inherit;
+  }
+
+  .container__ctablock__ctaprimary {
+    + .container__ctablock__ctasecondary {
+      margin-top: 0;
+      margin-left: 1rem;
+    }
+  }
+}

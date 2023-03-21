@@ -1,0 +1,239 @@
+@import '@/styles/variables';
+
+.outer {
+  position: relative;
+  background-color: $color--brand-blue-100;
+  color: $color--white;
+}
+
+.container__head {
+  color: $color--white;
+
+  h2 {
+    &::after {
+      background-color: $color--white;
+    }
+  }
+
+  + .container__main {
+    margin-top: 2rem;
+  }
+}
+
+.container__main__controls {
+  display: none;
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  grid-gap: 1rem;
+}
+
+.container__main__controls__author {
+  border-left: 0.125rem solid $color--sky-blue-040;
+  padding: 0.5rem 0 0.5rem 1rem;
+  color: $color--sky-blue-040;
+  transition: color 0.2s ease, border-color 0.2s ease;
+
+  &.container__main__controls__author--active {
+    color: $color--white;
+    border-left-color: $color--white;
+  }
+}
+
+.container__main__controls__author__name {
+  font-weight: $font--body--bold;
+  font-size: 1.0625rem;
+
+  + .container__main__controls__author__desc {
+    margin-top: 0.25rem;
+  }
+}
+
+.container__main__controls__author__desc {
+  font-size: 0.875rem;
+}
+
+.container__main__quotes {
+  position: relative;
+  color: $color--white;
+  margin-bottom: $margin--tb-mobile;
+}
+
+.container__main__quotes__quote {
+  display: inline-flex !important;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+
+.container__main__quotes__quote__openquote,
+.container__main__quotes__quote__closequote {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.container__main__quotes__quote__closequote {
+  transform: rotate(180deg);
+  margin-left: auto;
+}
+
+.container__main__quotes__quote__body {
+  font-size: 1.5rem !important;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5em !important;
+}
+
+.container__main__quotes__quote__author {
+  font-size: 1.25rem;
+  color: $color--white;
+  margin-top: 1rem;
+}
+
+.container__main__quotes__quote__author__name {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.container__main__quotes__quote__author__desc {
+  font-size: 1rem;
+}
+
+.container__main__quotes__next,
+.container__main__quotes__prev {
+  top: 100%;
+  width: 2rem;
+  height: 2rem;
+  z-index: 1;
+  fill: $color--sky-blue-050;
+  transform-origin: center center;
+}
+
+.container__main__quotes__prev {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.container__main__quotes__next {
+  right: 0;
+  transform: rotate(0deg);
+}
+
+.container__main__quotes__dots {
+  li {
+    color: $color--white;
+    opacity: 1;
+    font-size: 0.75rem;
+
+    button {
+      &::before {
+        color: $color--white;
+        opacity: 0.4;
+        font-size: 0.75rem;
+      }
+    }
+
+    &[class='slick-active'] {
+      button {
+        &::before {
+          color: $color--white;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $media--tablet) {
+  .container__head {
+    + .container__main {
+      margin-top: 4rem;
+    }
+  }
+
+  .container__main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .container__main__controls {
+    display: grid;
+
+    + .container__main__quotes {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+
+  .container__main__quotes {
+    width: 30rem;
+  }
+
+  .container__main__quotes__quote {
+    padding-bottom: 0;
+    flex-direction: row;
+  }
+
+  .container__main__quotes__quote__openquote,
+  .container__main__quotes__quote__closequote {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .container__main__quotes__quote__closequote {
+    align-self: flex-end;
+    transform: translateX(-100%) rotate(180deg);
+  }
+
+  .container__main__quotes__quote__body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    flex: 1;
+  }
+
+  .container__main__quotes__quote__author {
+    display: none;
+  }
+
+  .container__main__quotes__next,
+  .container__main__quotes__prev {
+    top: 50%;
+  }
+
+  .container__main__quotes__prev {
+    left: 0;
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  .container__main__quotes__next {
+    right: 0;
+    transform: rotate(0deg) translateY(-50%);
+  }
+
+  .container__main__quotes__dots {
+    display: none !important;
+  }
+}
+
+@media (min-width: $media--desktop) {
+  .container__main__controls {
+    + .container__main__quotes {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+  }
+
+  .container__main__quotes {
+    margin-bottom: $margin--tb-desktop;
+    width: 66%;
+  }
+
+  .container__main__quotes__quote {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .container__main__quotes__quote__closequote {
+    transform: rotate(180deg);
+  }
+}

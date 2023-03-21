@@ -1,0 +1,17 @@
+.signout {
+  background: transparent;
+  border: transparent;
+  width: 37px;
+  margin-top: 2px;
+  margin-left: -15px;
+}
+
+.signout > svg {
+  color: black;
+  width: 18px;
+  margin-top: 1px;
+
+  @media (max-width: 768px) {
+    color: white;
+  }
+}

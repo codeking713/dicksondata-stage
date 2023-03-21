@@ -1,0 +1,51 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfMediaText from './'
+
+<Meta title="Components/Organisms/AcfMediaText" component={AcfMediaText} />
+
+# Component
+
+Use this to display media and text in a 50/50 layout.
+
+<Canvas>
+  <Story name="Component">
+    <AcfMediaText
+      title="Example Title Here"
+      body="Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper."
+      image={123653}
+      imageMeta={{
+        mediaItemUrl: 'https://dicksondata.local/wp-content/uploads/2021/07/thisisengineering-raeng-mF6gB6hV5OU-unsplash-scaled.jpg',
+        altText: 'Some alt text',
+        mediaDetails: {
+          height: 741,
+          width: 1110
+        }
+      }}
+      cta={{icon: 'arrowRight', text: 'Take a look'}}
+    />
+  </Story>
+</Canvas>
+
+## Media Left
+
+Media will display on the right on large screens by default. Use the `mediaLeft` prop to display the media on the left side.
+
+<Canvas>
+  <Story name="MediaLeft">
+    <AcfMediaText
+      title="Example Title Here"
+      body="Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper."
+      image={123653}
+      imageMeta={{
+        mediaItemUrl: 'https://dicksondata.local/wp-content/uploads/2021/07/thisisengineering-raeng-mF6gB6hV5OU-unsplash-scaled.jpg',
+        altText: 'Some alt text',
+        mediaDetails: {
+          height: 741,
+          width: 1110
+        }
+      }}
+      cta={{icon: 'arrowRight', text: 'Take a look'}}
+      mediaLeft
+    />
+  </Story>
+</Canvas>

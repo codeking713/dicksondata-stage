@@ -1,0 +1,71 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import SectionHead from './'
+
+<Meta title="Components/Molecules/SectionHead" component={SectionHead} />
+
+# SectionHead
+
+Use this to alert the user of an event.
+
+<Canvas>
+  <Story name="Component">
+    <SectionHead
+      heading="This is a h2 heading."
+      headingTag="h2"
+      subheading="This is some subheading copy."
+      subheadingTag="p"
+    />
+  </Story>
+</Canvas>
+
+## Alignment
+
+Three alignments are supported.
+
+<Canvas>
+  <Story name="Alignment">
+    <SectionHead
+      heading="Left aligned"
+      headingTag="h2"
+      subheading="This is some subheading copy."
+      alignment="left"
+    />
+    <SectionHead
+      heading="Center aligned"
+      headingTag="h2"
+      subheading="This is some subheading copy."
+      alignment="center"
+    />
+    <SectionHead
+      heading="Right aligned"
+      headingTag="h2"
+      subheading="This is some subheading copy."
+      alignment="right"
+    />
+  </Story>
+</Canvas>
+
+## Headings
+
+Supports H1 through H6.
+
+<Canvas>
+  <Story name="Headings">
+    <SectionHead heading="H1 Heading" headingTag="h1" alignment="left" />
+    <br />
+    <br />
+    <SectionHead heading="H2 Heading" headingTag="h2" alignment="left" />
+    <br />
+    <br />
+    <SectionHead heading="H3 Heading" headingTag="h3" alignment="left" />
+    <br />
+    <br />
+    <SectionHead heading="H4 Heading" headingTag="h4" alignment="left" />
+    <br />
+    <br />
+    <SectionHead heading="H5 Heading" headingTag="h5" alignment="left" />
+    <br />
+    <br />
+    <SectionHead heading="H6 Heading" headingTag="h6" alignment="left" />
+  </Story>
+</Canvas>

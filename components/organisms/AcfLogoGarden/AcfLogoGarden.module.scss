@@ -1,0 +1,65 @@
+@import '@/styles/variables';
+
+.section {
+  @include section;
+}
+
+.section__head {
+  + .section__logogarden {
+    margin-top: 3rem;
+  }
+}
+
+.section__logogarden__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 100%;
+  position: relative;
+
+  + .section__logogarden__logo {
+    margin-top: 3rem;
+  }
+}
+
+.section__logogarden__logo__img {
+  @include background-image(contain);
+}
+
+@media (min-width: $media--tablet) {
+  .section__logogarden {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+  }
+
+  .section__logogarden__logo {
+    width: 12rem;
+    margin-left: 1.3125rem;
+    margin-right: 1.3125rem;
+
+    + .section__logogarden__logo {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media (min-width: $media--desktop) {
+  .section__head {
+    + .section__logogarden {
+      margin-top: $margin--tb-desktop--child;
+    }
+  }
+
+  .section__logogarden__logo {
+    width: 12rem;
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+
+    + .section__logogarden__logo {
+      margin-top: 1rem;
+    }
+  }
+}

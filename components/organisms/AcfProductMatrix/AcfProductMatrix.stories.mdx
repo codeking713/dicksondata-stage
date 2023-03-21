@@ -1,0 +1,77 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfProductMatrix from './'
+
+<Meta
+  title="Components/Organisms/AcfProductMatrix"
+  component={AcfProductMatrix}
+/>
+
+# Component
+
+Use this to display the product matrix on a page
+
+<Canvas>
+  <Story name="Component">
+    <AcfProductMatrix
+      heading="Need expert help?"
+      copy="You can contact us via any of the following"
+      footnote="This is the footer note"
+      products={[
+        {
+          name: 'Touchscreen Data Logger',
+          price: 'From $479.00',
+          link: {
+            url: '#',
+            title: 'View Touchscreen Data Logger',
+            target: '_blank'
+          },
+          ports: '1',
+          communication: 'WiFi + Ethernet',
+          power: 'AC + PoE',
+          battery: '70-hour Battery Backup',
+          storage: '1 million sample points',
+          updates: 'Yes',
+          display: '7 Touchscreen',
+          network: 'On-device USB Config File	',
+          dimensions: '8.5 x 1.75 x 7.0 (21.0 x 4.5 x 18.0cm)'
+        },
+        {
+          name: 'Display Data Logger',
+          price: 'From $349.00',
+          link: {
+            url: '#',
+            title: 'View Display Data Logger',
+            target: '_blank'
+          },
+          ports: '1',
+          communication: 'WiFi + Ethernet',
+          power: 'AC + PoE',
+          battery: '70-hour Battery Backup',
+          storage: '1 million sample points',
+          updates: 'Yes',
+          display: '7 Touchscreen',
+          network: 'On-device USB Config File	',
+          dimensions: '8.5 x 1.75 x 7.0 (21.0 x 4.5 x 18.0cm)'
+        },
+        {
+          name: 'RF Display Data Logger',
+          price: 'From $259.00',
+          link: {
+            url: '#',
+            title: 'View  View RF Data Logger',
+            target: '_blank'
+          },
+          ports: '1',
+          communication: 'WiFi + Ethernet',
+          power: 'AC + PoE',
+          battery: '70-hour Battery Backup',
+          storage: '1 million sample points',
+          updates: 'Yes',
+          display: '7 Touchscreen',
+          network: 'On-device USB Config File	',
+          dimensions: '8.5 x 1.75 x 7.0 (21.0 x 4.5 x 18.0cm)'
+        }
+      ]}
+    />
+  </Story>
+</Canvas>

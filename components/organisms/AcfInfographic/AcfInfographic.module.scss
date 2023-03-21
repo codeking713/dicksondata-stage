@@ -1,0 +1,25 @@
+@import '@/styles/variables';
+
+.container,
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  margin-block-start: 2rem;
+  margin-block-end: 2rem;
+}
+
+.container {
+  .container__button {
+    color: $color--white !important;
+  }
+}
+
+@media (max-width: $media--phablet) {
+  .heading {
+    font-size: $margin--lr-desktop;
+  }
+}

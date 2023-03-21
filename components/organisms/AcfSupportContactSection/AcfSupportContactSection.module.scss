@@ -1,0 +1,80 @@
+@import '@/styles/variables';
+@import '@/styles/grid';
+
+.section {
+  color: $color--gray-090;
+  position: relative;
+  padding-top: $padding--tb;
+  padding-bottom: $padding--tb;
+}
+
+.section__tiles {
+  text-align: center;
+  margin-top: $margin--tb-desktop--child;
+}
+
+.section__tiles__image {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  align-self: normal;
+
+  & > div {
+    border-radius: 0.5rem;
+  }
+}
+
+.section__tiles__title {
+  font-size: 1.125em;
+  line-height: 1.325em;
+  margin-top: 1rem;
+}
+
+.section__tiles__title--chat {
+  font-weight: $font--heading--bold;
+  font-size: 1.375em;
+  line-height: 1.3em;
+  cursor: pointer;
+  color: $color--brand-blue-100;
+  display: inline-flex;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.section__tiles__cta {
+  font-weight: $font--heading--bold;
+  font-size: 1.375em;
+  line-height: 1.3em;
+  margin-top: 0.3rem;
+  cursor: pointer;
+  display: inline-flex;
+
+  a {
+    text-decoration: none;
+    color: $color--brand-blue-100;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.list__icon__outline {
+  border-radius: 5rem;
+  margin: auto;
+  width: 55px;
+  height: 55px;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.list__icon__outline--style {
+  background-color: $color--sky-blue-100-opacity;
+  padding: 1rem;
+  height: 4rem;
+  width: 4rem;
+}

@@ -1,0 +1,14 @@
+@import '@/styles/variables';
+@import '@/styles/grid';
+
+.artifacts {
+  padding-top: 2rem;
+}
+
+.artifacts--nopadding {
+  padding-bottom: 0;
+}
+
+.artifacts__content {
+  margin-top: 3rem;
+}

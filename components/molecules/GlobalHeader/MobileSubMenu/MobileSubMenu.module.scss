@@ -1,0 +1,45 @@
+@import '@/styles/variables';
+
+.subnav {
+  padding-left: 1.063rem;
+  display: none;
+}
+
+.subnav__open {
+  display: block;
+}
+
+.subnav--dropdwn {
+  display: flex;
+}
+
+.subnav__label {
+  font-size: 1.125rem;
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 1.063rem;
+  background: transparent;
+  align-items: center;
+  border: none;
+  text-decoration: none;
+  color: #313f49;
+}
+
+.subnav__link {
+  margin-bottom: 1.063rem;
+
+  a {
+    font-size: 1.125rem;
+    color: #313f49;
+    text-decoration: none;
+  }
+}
+
+.subnav__icon {
+  margin-left: 1.875rem;
+}
+
+.subnav__icon__link {
+  margin-right: 1.063rem;
+  transform: rotate(-90deg);
+}

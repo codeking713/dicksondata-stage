@@ -1,0 +1,45 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfInfographic from './'
+
+<Meta title="Components/Organisms/AcfInfographic" component={AcfInfographic} />
+
+# Component AcfInfographic
+
+<Canvas>
+  <Story name="Component">
+    <AcfInfographic
+      title="Why choose Dickson for hospital & healthcare monitoring?"
+      imageMeta={{
+        mediaItemUrl:
+          'https://dicksondata.com/wp-content/uploads/2019/11/iStock-493302504-rs.jpg',
+        altText: 'A screenshot of the codebase.',
+        mediaDetails: {
+          width: 1420,
+          height: 916
+        }
+      }}
+    />
+  </Story>
+</Canvas>
+
+# With button
+
+<Canvas>
+  <Story name="showButton">
+    <AcfInfographic
+      title="Why choose Dickson for hospital & healthcare monitoring?"
+      ctaUrl="https://dicksondata.com"
+      ctaText="Read more"
+      showButton={true}
+      imageMeta={{
+        mediaItemUrl:
+          'https://dicksondata.com/wp-content/uploads/2019/11/iStock-493302504-rs.jpg',
+        altText: 'A screenshot of the codebase.',
+        mediaDetails: {
+          width: 1420,
+          height: 916
+        }
+      }}
+    />
+  </Story>
+</Canvas>

@@ -1,0 +1,38 @@
+@import '@/styles/variables';
+
+.reset {
+  margin-left: 0;
+}
+
+.reset__input {
+  width: 30rem;
+  margin-top: 1rem;
+}
+
+.reset__btn {
+  margin-top: 1.5rem;
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+}
+
+.reset__heading {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: $media--desktop) {
+  .reset__input {
+    width: 20rem;
+  }
+}
+
+@media (max-width: $media--tablet) {
+  .reset__input {
+    width: 20rem;
+  }
+}
+
+@media (max-width: $media--phablet) {
+  .reset__input {
+    width: 100%;
+  }
+}

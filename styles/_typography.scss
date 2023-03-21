@@ -1,0 +1,135 @@
+h1 {
+  font-family: $font--heading;
+  font-weight: $font--heading--bold;
+  font-size: 2.75em;
+  line-height: 1.0625em;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-family: $font--heading;
+  font-weight: $font--heading--semibold;
+  font-size: 2em;
+  line-height: 1.3125em;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-family: $font--heading;
+  font-weight: $font--heading--semibold;
+  font-size: 1.25em;
+  line-height: 1.125em;
+}
+
+h4 {
+  font-family: $font--body;
+  font-weight: $font--body--regular;
+  font-size: 1.125em;
+  line-height: 1.25em;
+}
+
+h5 {
+  font-family: $font--body;
+  font-weight: $font--body--bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.875em;
+  line-height: 1.375em;
+}
+
+h6 {
+  font-family: $font--body;
+  font-weight: $font--body--regular;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.75em;
+  line-height: 1.4125em;
+}
+
+p {
+  line-height: 1.5em;
+
+  &.paragraph--small {
+    font-size: 0.875em;
+    color: $color--gray-070;
+  }
+
+  &:empty {
+    display: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.subhead,
+.prehead {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.prehead {
+  + h1,
+  + h2,
+  + h3,
+  + h4,
+  + h5,
+  + h6,
+  + .subhead {
+    margin-top: 0;
+  }
+}
+
+a {
+  transition: color 0.2s ease;
+
+  &.cta {
+    color: currentColor;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+div,
+main {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .subhead,
+  .prehead,
+  p {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $media--tablet) {
+  h1 {
+    font-size: 3.5em;
+  }
+
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3 {
+    font-size: 1.75em;
+  }
+
+  h4 {
+    font-size: 1.5em;
+  }
+}

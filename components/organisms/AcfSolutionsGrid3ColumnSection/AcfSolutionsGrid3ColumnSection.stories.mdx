@@ -1,0 +1,78 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfSolutionsGrid3ColumnSection from './'
+
+<Meta
+  title="Components/Organisms/AcfSolutionsGrid3ColumnSection"
+  component={AcfSolutionsGrid3ColumnSection}
+/>
+
+# Component
+
+Use this to display the solutions grid 3 column section on a page
+
+<Canvas>
+  <Story name="Component">
+    <AcfSolutionsGrid3ColumnSection
+      heading="Solutions by Application"
+      cta={{url: '#', title: 'Contact one of our experts'}}
+      copy="Do you have a specific monitoring need? Check if an application bellow addresses it. Or you can always consult one of our experts"
+      items={[
+        {
+          title: 'Vaccine monitoring',
+          subtitle:
+            'Habitant morbi tristique senectus et netu wt pulvinar pellentes',
+          link: {url: '#', text: 'View details', target: '_blank'},
+          backgroundMeta: {
+            altText: 'alt text',
+            mediaItemUrl: 'http://google.com',
+            background: 1
+          }
+        },
+        {
+          title: 'Vaccine monitoring',
+          subtitle:
+            'Habitant morbi tristique senectus et netu wt pulvinar pellentes',
+          link: {url: '#', text: 'View details', target: '_blank'},
+          backgroundMeta: {
+            altText: 'alt text',
+            mediaItemUrl: 'http://google.com',
+            background: 2
+          }
+        },
+        {
+          title: 'Vaccine monitoring',
+          subtitle:
+            'Habitant morbi tristique senectus et netu wt pulvinar pellentes',
+          link: {url: '#', text: 'View details', target: '_blank'},
+          backgroundMeta: {
+            altText: 'alt text',
+            mediaItemUrl: 'http://google.com',
+            background: 3
+          }
+        },
+        {
+          title: 'Vaccine monitoring',
+          subtitle:
+            'Habitant morbi tristique senectus et netu wt pulvinar pellentes',
+          link: {url: '#', text: 'View details', target: '_blank'},
+          backgroundMeta: {
+            altText: 'alt text',
+            mediaItemUrl: 'http://google.com',
+            background: 4
+          }
+        },
+        {
+          title: 'Vaccine monitoring',
+          subtitle:
+            'Habitant morbi tristique senectus et netu wt pulvinar pellentes',
+          link: {url: '#', text: 'View details', target: '_blank'},
+          backgroundMeta: {
+            altText: 'alt text',
+            mediaItemUrl: 'http://google.com',
+            background: 5
+          }
+        }
+      ]}
+    />
+  </Story>
+</Canvas>

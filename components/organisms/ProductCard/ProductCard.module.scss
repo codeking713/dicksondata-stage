@@ -1,0 +1,103 @@
+@import '@/styles/variables';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: $color--white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  min-height: 40rem;
+}
+
+.card__image {
+  border-bottom: 2px solid #f6f9fa;
+  position: relative;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.card__image__badge {
+  position: absolute;
+  left: 1.25rem;
+  top: 1rem;
+  z-index: 2;
+}
+
+.card__image__obj {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.card__image__obj--placeholder {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+.card__content {
+  box-sizing: border-box;
+  padding: 1.375rem 1.25rem 0 1.25rem;
+  min-height: 10rem;
+  overflow: hidden;
+}
+
+.card__content__category {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: $color--sky-blue-100;
+  font-weight: $font--heading--semibold;
+}
+
+.card__content__title {
+  margin-top: 0.5rem;
+  font-size: 1.375rem;
+  font-weight: $font--heading--bold;
+  line-height: 1.625rem;
+}
+
+.card__content__description {
+  line-height: 1.43rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+}
+
+.card__footer {
+  padding: 1.375rem 1.25rem 1.625rem;
+  margin-top: auto;
+}
+
+.card__footer__price {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 1.5rem;
+  height: 2.813rem;
+  color: $color--white;
+}
+
+@media (max-width: $media--tablet) {
+  .card {
+    max-width: 100%;
+  }
+}
+
+.decoration__none {
+  text-decoration: none;
+  color: inherit;
+}

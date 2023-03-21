@@ -1,0 +1,1 @@
+export const paypal_payflow_error_message = "Payment was not processed. Check credit card and billing information and try again. Contact Dickson support if the issue continues."

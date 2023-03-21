@@ -1,0 +1,18 @@
+@import '@/styles/variables';
+
+.modal__header {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.modal__success {
+  display: flex;
+  align-items: center;
+  padding: $padding--tb--lg;
+
+  svg {
+    margin-right: $margin--lr-mobile--child !important;
+    fill: $color--aqua-080 !important;
+  }
+}

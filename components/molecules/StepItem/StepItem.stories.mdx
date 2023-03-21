@@ -1,0 +1,33 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import StepItem from './'
+
+<Meta title="Components/Molecules/StepItem" component={StepItem} />
+
+# StepItem
+
+2 styles are supported.
+
+<Canvas>
+  <Story name="Show Steps">
+    <StepItem
+      title="Solution & Process"
+      text="Our vaccine data loggers collect temperature data from sensors and automatically deliver it to the cloud. From there, you can access your secure data from any internet-connected device."
+      showSteps={true}
+      index={0}
+    />
+    <StepItem
+      title="Compliance Reporting"
+      text="The DicksonOne dashboard displays all critical monitoring information on a single screen with a built-in audit trail. Get a historical record of alerts and create customized, automated reports for compliance reporting."
+      showSteps={true}
+      index={1}
+    />
+  </Story>
+  <Story name="Hide Steps">
+    <StepItem
+      title="Real-Time Alerts"
+      text="Receive alerts on how and when you want and customize settings or user permissions. Set up alerts for warnings and excursions, high/low variable readings, and device failures or disconnects."
+      showSteps={false}
+      index={0}
+    />
+  </Story>
+</Canvas>

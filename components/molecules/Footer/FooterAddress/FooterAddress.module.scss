@@ -1,0 +1,25 @@
+@import '@/styles/variables';
+
+.address {
+  margin-bottom: 2rem;
+}
+
+.address__header {
+  font-weight: $font--heading--semibold;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.address__line {
+  margin-bottom: 0.4rem;
+  color: $color--gray-070;
+}
+
+.container__text--countries {
+  margin-left: 0.5rem;
+}
+
+.address__flat {
+  border-radius: 50%;
+}

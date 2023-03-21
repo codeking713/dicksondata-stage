@@ -1,0 +1,47 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfMultiItemImageCTASection from './'
+
+<Meta
+  title="Components/Organisms/AcfMultiItemImageCTASection"
+  component={AcfMultiItemImageCTASection}
+/>
+
+# Component
+
+Use this to display the multi-item image CTA section on a page
+
+<Canvas>
+  <Story name="Component">
+    <AcfMultiItemImageCTASection
+      items={[
+        {
+          title: 'Parts & accessories',
+          copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet kroin gravida dolo.',
+          cta: {
+            url: '#',
+            title: 'See all parts, accessories, software (250)',
+            target: '_blank'
+          }
+        },
+        {
+          title: 'Chart recorders',
+          copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet kroin gravida dolo.',
+          cta: {
+            url: '#',
+            title: 'See all chart recorders (40)',
+            target: '_blank'
+          }
+        },
+        {
+          title: 'Parts & accessories',
+          copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet kroin gravida dolo.',
+          cta: {
+            url: '#',
+            title: 'See all parts, accessories, software (250)',
+            target: '_blank'
+          }
+        }
+      ]}
+    />
+  </Story>
+</Canvas>

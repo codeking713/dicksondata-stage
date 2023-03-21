@@ -1,0 +1,9 @@
+@import '@/styles/variables';
+
+.summary {
+  font-size: 1.125rem;
+}
+
+.summary__query {
+  font-weight: $font--heading--bold;
+}

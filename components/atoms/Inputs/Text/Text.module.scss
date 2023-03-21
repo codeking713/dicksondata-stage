@@ -1,0 +1,69 @@
+@import '@/styles/variables';
+
+.inputgrp--dark {
+  .inputgrp__main__input {
+    color: $color--white;
+  }
+
+  .inputgrp__main__label {
+    color: $color--gray-030;
+  }
+
+  .inputgrp__description {
+    color: $color--gray-020;
+  }
+
+  .inputgrp__main__label__asterisk {
+    color: $color--red-020;
+  }
+}
+
+.inputgrp__main {
+  position: relative;
+}
+
+.inputgrp__main__input {
+  width: 100%;
+  height: 3.75rem;
+  padding: 1rem 0.75rem 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid $color--gray-030;
+  background-color: transparent;
+  color: $color--gray-100;
+  font-size: 1.0625rem;
+
+  &[value]:not([value='']),
+  &:focus {
+    + .inputgrp__main__label {
+      transform: translateY(-1.5rem) scale(0.8);
+    }
+  }
+
+  &:focus {
+    outline: 0;
+    border-bottom-color: $color--sky-blue-100;
+  }
+}
+
+.inputgrp__main__label {
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  color: $color--gray-080;
+  transition: transform 0.15s ease-in-out;
+  transform-origin: left center;
+}
+
+.inputgrp__description {
+  font-size: 0.875rem;
+  line-height: 1.25em;
+  font-style: italic;
+  color: $color--gray-080;
+}
+
+.inputgrp__main__label__asterisk {
+  color: $color--red-100;
+}

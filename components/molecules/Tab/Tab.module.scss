@@ -1,0 +1,228 @@
+@import '@/styles/variables';
+
+.tabs {
+  width: 100%;
+  position: relative;
+}
+
+.tabs__nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  &::before {
+    background-image: linear-gradient(to right, #fff, #fff0);
+    position: absolute;
+    content: '';
+    height: 70px;
+    z-index: 4;
+    width: 30px;
+    top: -70px;
+    pointer-events: none;
+  }
+
+  &::after {
+    background-image: linear-gradient(to right, #fff0, #fff);
+    position: absolute;
+    content: '';
+    height: 70px;
+    z-index: 4;
+    width: 30px;
+    right: 0;
+    top: -70px;
+    pointer-events: none;
+  }
+}
+
+.tabs__nav__items {
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  text-align: center;
+  margin: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: -5px;
+  position: absolute;
+  bottom: 0;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color--gray-040;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $color--gray-040;
+  }
+}
+
+.tabs__nav__items__tab {
+  display: inline-block;
+  padding: $padding--tb 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tabs__nav__items__tab--active {
+  background-color: $color--brand-blue-007;
+}
+
+.tabs__nav__items__mobileHeader__text {
+  flex: 1;
+}
+
+.tabs__content__item__mobileHeader__bubble {
+  max-width: 100%;
+  text-align: center;
+}
+
+.tabs__nav__items__tab__text,
+.tabs__content__item__mobileHeader {
+  font-size: 1.875em;
+  line-height: 1.25em;
+  color: $color--gray-090;
+  font-weight: $font--heading--semibold;
+  vertical-align: middle;
+}
+
+.tabs__nav__items__tab__bubble,
+.tabs__content__item__mobileHeader__bubble {
+  background-color: $color--gray-100;
+  color: $color--white;
+  padding: 0.2rem $padding--tb;
+  font-size: 0.875em;
+  line-height: 1.3em;
+  margin-left: $margin--lr-mobile--child;
+  vertical-align: middle;
+  border-radius: 10rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.47em;
+    line-height: 1.3em;
+  }
+}
+
+.tabs__content {
+  background-color: $color--brand-blue-007;
+
+  &::before {
+    position: absolute;
+    content: ' ';
+    height: 60px;
+    z-index: 100;
+    width: 30px;
+  }
+}
+
+.tabs__content__backgroundLeft {
+  position: absolute;
+  left: 0;
+  top: 10rem;
+  z-index: -1;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.tabs__content__backgroundRight {
+  position: absolute;
+  right: 0;
+  top: 7rem;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  z-index: -1;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.tabs__content__item {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+
+  @media (max-width: 768px) {
+    visibility: visible;
+    position: initial;
+    opacity: 1;
+  }
+}
+
+.tabs__content__item--active {
+  visibility: visible;
+  position: initial;
+  opacity: 1;
+}
+
+.tabs__content__item__mobileHeader {
+  visibility: hidden;
+  opacity: 0;
+  padding: 1.5rem 2rem;
+  position: absolute;
+
+  @media (max-width: 768px) {
+    visibility: visible;
+    opacity: 1;
+    border-bottom: 1px solid $color--gray-004;
+    border-top: 1px solid $color--gray-004;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 4rem;
+  }
+}
+
+.tabs__content__item__mobileHeader__expander {
+  width: 1rem;
+  position: absolute;
+  right: 30px;
+  top: 40px;
+}
+
+.tabs__content__item__mobileHeader__expander--open {
+  transform: rotate(180deg);
+}
+
+.tabs__content__item__body {
+  padding: $padding--tb;
+}
+
+@media (max-width: 768px) {
+  .tabs__content__item__body__expander {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transform-origin: top center;
+    transition: visibility 0s, opacity 0.5s;
+  }
+
+  .tabs__content__item__body__expander--open {
+    visibility: visible;
+    position: initial;
+    opacity: 1;
+  }
+}
+
+@media (min-width: $media--tablet) {
+  .section__head {
+    margin-bottom: 4rem;
+  }
+}

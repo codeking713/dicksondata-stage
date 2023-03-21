@@ -1,0 +1,13 @@
+@import '@/styles/variables';
+
+.address__heading {
+  font-size: 1.375rem;
+  font-weight: $font--heading--semibold;
+  margin-bottom: 1rem;
+}
+
+.address__lines {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: $font--heading--semibold;
+}

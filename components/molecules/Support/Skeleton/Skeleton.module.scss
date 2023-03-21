@@ -1,0 +1,30 @@
+@import '@/styles/variables';
+@import '@/styles/grid';
+
+.skeleton {
+  width: 100%;
+}
+
+.skeleton__header {
+  display: flex;
+}
+
+.skeleton__header__image {
+  margin-right: 1rem;
+}
+
+.skeleton__topgap {
+  margin-top: 0.5rem;
+}
+
+.skeleton--center {
+  text-align: center;
+}
+
+.skeleton--right {
+  text-align: right;
+}
+
+.skeleton__item {
+  padding: 1rem;
+}

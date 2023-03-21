@@ -1,0 +1,31 @@
+{
+  "locations": [
+    {
+      "addressLine1": "930 S Westwood Ave,",
+      "addressLine2": "Addison, IL, 60101, USA",
+      "addressLine3": null,
+      "country": "USA",
+      "email": "info@dicksondata.com",
+      "tel": "(630) 563-4209",
+      "__typename": "HeadlessConfig_Additionalsettings_ContactInfo_locations"
+    },
+    {
+      "addressLine1": "G-02, Wisma LYL, No. 12",
+      "addressLine2": "Jalan 51A/223, Section 51A",
+      "addressLine3": "46100, Pataling Jaya, Selangor",
+      "country": "Malaysia",
+      "email": null,
+      "tel": null,
+      "__typename": "HeadlessConfig_Additionalsettings_ContactInfo_locations"
+    },
+    {
+      "addressLine1": "720 rue Louis Lépine,",
+      "addressLine2": "34000 Montpellier, France",
+      "addressLine3": null,
+      "country": "France",
+      "email": null,
+      "tel": "+33(0)4 99 13 67 30",
+      "__typename": "HeadlessConfig_Additionalsettings_ContactInfo_locations"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import ListItem from './'
+
+<Meta title="Components/Molecules/ListItem" component={ListItem} />
+
+# ListItem
+
+Use this to display a list item
+
+<Canvas>
+  <Story name="Component">
+    <ListItem
+      title="Handles every exception to ensure 100% compliance"
+      text="Streamline corrective actions and unify processes when exceptions occur to reduce or eliminate the risk for asset loss."
+      iconStyle={1}
+    />
+  </Story>
+</Canvas>
+
+## Alignment
+
+Three styles are supported.
+
+<Canvas>
+  <Story name="Icon Styles">
+    <ListItem
+      title="Meets all pharmacy and healthcare regulatory requirements"
+      text="Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs."
+    />
+    <br />
+    <br />
+    <ListItem
+      title="Automates the process of vaccine monitoring"
+      text="Optimize and automate vaccine storage, handling and monitoring."
+      iconStyle={1}
+    />
+    <br />
+    <br />
+    <ListItem
+      title="Delivers end-to-end monitoring of all key compliance mesaures"
+      text="Effortlessly monitor essential temperature and environmental data of your entire process–from lab to shipping through remote cloud monitoring"
+      iconStyle={2}
+    />
+  </Story>
+</Canvas>

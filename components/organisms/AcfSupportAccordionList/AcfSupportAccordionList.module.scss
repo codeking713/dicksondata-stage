@@ -1,0 +1,74 @@
+@import '@/styles/variables';
+
+.items {
+  padding: $margin--lr-desktop;
+}
+
+.items__heading {
+  color: $color--aqua-080;
+  padding-top: $padding--tb;
+  padding-bottom: $padding--lr-mobile;
+  font-weight: 900;
+}
+
+.subsection__subject {
+  padding-top: $margin--tb-mobile--child;
+  padding-bottom: 0.5rem;
+  font-weight: $font--heading--bold;
+}
+
+.subsection__copy {
+  background-color: $color--brand-blue-010;
+}
+
+.subsection__copy--padding {
+  padding: $margin--lr-desktop !important;
+}
+
+.subsection__copy--padding img {
+  display: block;
+  margin: 1.5rem;
+}
+
+.subsection__copy--padding ol {
+  display: grid;
+  margin-left: 0;
+  padding-left: 0;
+  counter-reset: item;
+}
+
+.subsection__copy--padding ol > li {
+  margin-left: 0;
+  padding-left: 0;
+  counter-increment: item;
+  list-style: none inside;
+  width: auto;
+  margin-bottom: $margin--lr-mobile;
+}
+
+.subsection__copy--padding ol > li::before {
+  content: counter(item);
+  padding: 0px 8px 2px;
+  line-height: 3rem;
+  margin-right: 0.5rem;
+  background: $color--white;
+  font-weight: bold;
+  border: 2px solid $color--gray-080;
+  border-width: thin;
+  border-radius: 50%;
+}
+
+.subsection__title--padding {
+  padding-left: unset !important;
+  padding-right: unset !important;
+}
+
+.items--borderbottom {
+  border-bottom: 1px solid $color--gray-015;
+}
+
+@media (max-width: $media--tablet) {
+  .items {
+    padding: unset !important;
+  }
+}

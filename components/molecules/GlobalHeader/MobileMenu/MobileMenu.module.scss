@@ -1,0 +1,67 @@
+@import '@/styles/variables';
+
+.nav {
+  display: none;
+  width: 100%;
+  height: 86vh;
+  position: fixed;
+  z-index: $z-index--mobilemenu;
+  background-color: $color--gray-010;
+}
+
+.nav--open {
+  display: flex;
+}
+
+.nav__content {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  ul {
+    margin: 0;
+    list-style-type: none;
+  }
+}
+
+.nav__content__main {
+  padding: 1.375rem;
+
+  a {
+    display: flex;
+  }
+}
+
+.nav__content__main__dropdown {
+  display: flex;
+}
+
+.nav__content__main__dropdown__open {
+  display: block;
+}
+
+.nav__content__main__dropdown__label {
+  font-size: 1.125rem;
+  cursor: pointer;
+  margin-bottom: 1.063rem;
+  background: transparent;
+  align-items: center;
+  border: none;
+  color: #313f49;
+  text-decoration: none;
+}
+
+.nav__content__main__dropdown__icon {
+  margin-left: 1.875rem;
+}
+
+.nav__content__main__dropdown__icon__link {
+  margin-right: 1.063rem;
+  transform: rotate(-90deg);
+}
+
+@media (min-width: $media--tablet) {
+  .nav--open {
+    display: none;
+  }
+}

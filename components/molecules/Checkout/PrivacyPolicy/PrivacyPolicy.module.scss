@@ -1,0 +1,10 @@
+@import '@/styles/variables';
+
+.policy {
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+
+  a {
+    color: $color--sky-blue-100;
+  }
+}

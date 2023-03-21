@@ -1,0 +1,43 @@
+@import '@/styles/variables';
+
+.results {
+  margin-top: 2rem;
+  text-align: center;
+
+  button {
+    padding: 0.875rem 1.625rem;
+    border-radius: 10rem;
+    display: inline-flex;
+    text-decoration: none;
+    border-width: 0.125rem;
+    border-style: solid;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-family: $font--heading;
+    font-weight: $font--heading--semibold;
+    background-color: $color--gray-100;
+    color: $color--white;
+    border-color: currentColor;
+
+    &:hover {
+      background-color: $color--gray-090;
+    }
+
+    &:disabled {
+      display: none;
+    }
+  }
+}
+
+.results__item {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+  }
+}

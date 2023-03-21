@@ -1,0 +1,129 @@
+@import '@/styles/variables';
+@import '@/styles/grid';
+
+.section {
+  background-color: $color--brand-blue-005;
+}
+
+.section__header {
+  margin-bottom: $margin--tb-desktop--child;
+}
+
+.section__tile--back {
+  background-color: $color--white;
+}
+
+.section__tile {
+  padding: $padding--lr;
+  border: 1px solid $color--gray-010;
+  background-color: $color--white;
+  color: $color--gray-090;
+  text-decoration: none;
+
+  &:hover {
+    .section__tile__footer__header {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .section__tile__body__overlay {
+      opacity: 1;
+    }
+  }
+}
+
+.section__tile__body {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.section__cards {
+  display: grid;
+  grid: auto-flow / 1fr;
+  grid-gap: 1.5rem;
+}
+
+
+.section__tile__body__image {
+  @include background-image;
+}
+
+.section__tile__body__overlay {
+  background-color: $color--white;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  padding: $padding--tb;
+  transform-origin: bottom;
+  width: 100%;
+}
+
+.section__tile__body__overlay__heading {
+  font-weight: $font--heading--semibold;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  margin-bottom: 0.8rem;
+}
+
+.section__tile__body__overlay__text {
+  line-height: 20.93px;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.section__tile__footer {
+  padding: 2rem 0.8rem 0.5rem 0.5rem;
+  min-height: 65px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.section__tile__footer__title {
+  font-weight: $font--heading--semibold;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  opacity: 1;
+  transition: opacity 0.5s;
+  flex: 1;
+
+  + .section__tile__footer__icon {
+    margin-left: 0.5rem;
+  }
+}
+
+.section__tile__footer__icon {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.375em;
+}
+
+@media (min-width: $media--tablet) {
+  .section__cards {
+    display: grid;
+    grid: auto-flow / 1fr 1fr;
+    grid-gap: 1.5rem;
+  }
+
+  .section__tile__body {
+    height: 18rem;
+  }
+}
+
+@media (min-width: $media--desktop) {
+  .section__cards {
+    grid: auto-flow / 1fr 1fr 1fr;
+    grid-gap: 1.25rem;
+  }
+}
+
+@media (min-width: $media--desktop-lrg) {
+  .section__cards {
+    grid: auto-flow / repeat(4, 1fr);
+    grid-gap: 1rem;
+  }
+}

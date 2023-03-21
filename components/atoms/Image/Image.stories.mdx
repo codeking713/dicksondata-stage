@@ -1,0 +1,59 @@
+import {Meta, Story, Canvas} from '@storybook/addon-docs/blocks'
+
+import DisplayImage from '.'
+
+<Meta title="Components/Atoms/Image" component={DisplayImage} />
+
+# Image
+
+Use this component to display a image.
+
+<Canvas>
+  <Story name="Component">
+    <DisplayImage
+      alt="Image alt text"
+      height="480"
+      url="https://dicksondata.com/wp-content/uploads/2019/11/iStock-493302504-rs.jpg"
+      width="640"
+    />
+  </Story>
+</Canvas>
+
+## Image + Link
+
+Add a link to the image using the `href` prop.
+
+<Canvas>
+  <Story name="Image + Link">
+    <DisplayImage
+      alt="Image alt text"
+      caption="This is the image caption"
+      height="480"
+      href="https://DAP.com"
+      url="https://dicksondata.com/wp-content/uploads/2019/11/iStock-493302504-rs.jpg"
+      width="640"
+    />
+  </Story>
+</Canvas>
+
+## Controls
+
+Play around with `<Display />` props in the [Canvas tab of the Controls story](?path=/story/components-atoms-image--controls).
+
+export const Template = (args) => <DisplayImage {...args} />
+
+<Canvas>
+  <Story
+    name="Controls"
+    args={{
+      alt: 'A screenshot of the codebase.',
+      caption: 'A screenshot of the codebase.',
+      height: '480',
+      url:
+        'https://dicksondata.com/wp-content/uploads/2019/11/iStock-493302504-rs.jpg',
+      width: '640'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

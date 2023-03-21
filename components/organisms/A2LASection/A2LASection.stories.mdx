@@ -1,0 +1,33 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import A2LASection from './'
+
+<Meta
+  title="Components/Organisms/A2LASection"
+  component={A2LASection}
+/>
+
+# Component
+
+Use this to display the A2LASection component.
+
+<Canvas>
+  <Story name="Component">
+    <A2LASection
+      {...{
+        "heading": "Searching for a copy of the latest A2LA?",
+        "cta": {
+          "__typename": "AcfLink",
+          "target": "",
+          "title": "See all A2LA documents",
+          "url": "https://hml4ny740urcp6hjhhu0cr6rp.js.wpenginepowered.com/global_page_config/products/"
+        },
+        "image": {
+          "__typename": "MediaItem",
+          "mediaItemUrl": "https://dickson.local/wp-content/uploads/2022/03/image_a2la.png",
+          "title": "image_a2la",
+          "altText": ""
+        }
+      }}
+    />
+  </Story>
+</Canvas>

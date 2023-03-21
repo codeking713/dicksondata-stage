@@ -1,0 +1,62 @@
+@import '@/styles/variables';
+
+.accordion__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion {
+  background-color: $color--white;
+  cursor: pointer;
+  padding-top: $padding--tb--lg;
+  padding-bottom: $border-radius--high;
+  padding-left: $padding--tb;
+  padding-right: $padding--tb--lg;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-top: 1px solid $color--gray-015;
+  transition: background-color 0.6s ease;
+  justify-content: space-between;
+}
+
+.accordion:hover,
+.active {
+  background-color: $color--white;
+}
+
+.accordion__title {
+  font-family: $font--heading;
+  font-size: $font--size--heading;
+  font-weight: $font--heading--semibold;
+  text-align: left;
+}
+
+.accordion__icon {
+  margin-left: auto;
+  margin-top: -$margin--lr-mobile;
+  fill: $color--aqua-080;
+  transform: rotate(90deg);
+  transition: transform 0.6s ease;
+}
+
+.rotate {
+  margin-left: auto;
+  fill: $color--gray-090;
+  transform: rotate(-90deg);
+  transition: 0.6s ease;
+}
+
+.accordion__content {
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+
+.accordion__text {
+  font-family: $font--heading;
+  font-weight: $font--heading--regular;
+  font-size: $font--size--heading;
+  padding-bottom: $padding--lr-mobile;
+  padding-left: $padding--tb;
+  padding-right: $padding--tb--lg;
+}

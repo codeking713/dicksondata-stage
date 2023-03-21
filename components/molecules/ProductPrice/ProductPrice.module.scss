@@ -1,0 +1,26 @@
+@import '@/styles/variables';
+
+.price__old {
+  color: $color--gray-080;
+  font-weight: $font--heading--semibold;
+  font-size: 1em;
+  text-decoration: line-through;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.price__current {
+  display: flex;
+  align-items: center;
+}
+
+.price__current__number {
+  color: $color--brand-blue;
+  font-weight: $font--heading--semibold;
+  font-size: 1.25em;
+  white-space: nowrap;
+}
+
+.price__current__badge {
+  margin-left: 0.5rem;
+}

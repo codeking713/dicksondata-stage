@@ -1,0 +1,30 @@
+@import '@/styles/variables';
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.more {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.more__button {
+  min-width: 30rem !important;
+
+  @media (max-width: $media--tablet) {
+    min-width: 100% !important;
+  }
+}
+
+@media (max-width: $media--tablet) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.skeleton {
+  margin-top: 2rem;
+}

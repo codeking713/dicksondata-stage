@@ -1,0 +1,19 @@
+@import '@/styles/variables';
+
+.bullet {
+  display: flex;
+}
+
+.bullet__icon {
+  margin-right: $margin--lr-mobile--child;
+}
+
+.bullet__icon--arrow {
+  fill: $color--brand-blue;
+  height: 15px;
+  width: 15px;
+}
+
+.bullet__content {
+  flex: 1;
+}

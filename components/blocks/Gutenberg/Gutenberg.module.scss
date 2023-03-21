@@ -1,0 +1,51 @@
+@import '@/styles/variables';
+
+main {
+  > .main {
+    @include container(false, true);
+
+    &.main--list {
+      padding-left: 3.25rem;
+    }
+
+    &:first-child {
+      margin-top: $margin--tb-mobile;
+    }
+
+    &:last-child {
+      margin-bottom: $margin--tb-mobile;
+    }
+
+    + .main {
+      margin-top: 2rem;
+
+      &.main--paragraph {
+        + .main--paragraph {
+          margin-top: 1.5rem;
+        }
+      }
+
+      &.main--list,
+      &.main--blockquote {
+        + .main--paragraph,
+        + .main--list + .main--blockquote {
+          margin-top: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $media--desktop) {
+  main {
+    > .main {
+      &:first-child {
+        margin-top: $margin--tb-desktop;
+      }
+
+      &:last-child {
+        margin-bottom: $margin--tb-desktop;
+      }
+    }
+  }
+}

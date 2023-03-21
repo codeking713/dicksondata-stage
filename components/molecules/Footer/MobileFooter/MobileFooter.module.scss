@@ -1,0 +1,43 @@
+@import '@/styles/variables';
+
+.mfooter {
+  display: none;
+}
+
+.mfooter__container--grayLinks {
+  a {
+    color: $color--gray-070;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.mfooter__container__content {
+  padding-bottom: $padding--tb;
+}
+
+.mfooter__container__content button {
+  background: transparent !important;
+  border: 1px solid;
+  color: $color--gray-070 !important;
+  height: 3rem;
+
+  &:hover {
+    background: $color--gray-070 !important;
+    border: 1px solid $color--white;
+    color: $color--white !important;
+  }
+}
+
+@media (max-width: 48rem) {
+  .mfooter__container--grayLinks div button p {
+    font-weight: bold;
+  }
+
+  .mfooter {
+    display: block;
+  }
+}

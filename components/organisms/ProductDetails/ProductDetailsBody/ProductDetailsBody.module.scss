@@ -1,0 +1,170 @@
+@import '@/styles/variables';
+
+// stylelint-disable selector-pseudo-class-no-unknown
+.body__title {
+  font-size: 1.875rem;
+  line-height: 1.3125em;
+  color: $color--gray-100;
+  margin: 0;
+
+  + .body__sku {
+    margin-top: 0.25rem;
+  }
+
+  + .body__price {
+    margin-top: 1rem;
+  }
+}
+
+.body__sku {
+  font-size: 1.125em;
+
+  + .body__price {
+    margin-top: 1rem;
+  }
+
+  + .body__desc,
+  + .body__more,
+  + .body__discontinued {
+    margin-top: 2rem;
+  }
+}
+
+.body__sku__name {
+  + .body__sku__value {
+    margin-left: 0.25rem;
+  }
+}
+
+.body__sku__value {
+  font-weight: $font--heading--bold;
+}
+
+.body__price {
+  display: flex;
+  align-items: flex-end;
+
+  + .body__desc,
+  + .body__more,
+  + .body__discontinued {
+    margin-top: 2rem;
+  }
+}
+
+.body__price__text {
+  font-size: 1.125em;
+  line-height: 1em;
+  font-weight: $font--heading--bold;
+
+  + .body__price__value {
+    margin-left: 0.75rem;
+  }
+}
+
+.body__price__text--regular {
+  text-decoration: line-through;
+  color: $color--gray-050;
+}
+
+.body__price__value {
+  font-size: 1.75em;
+  line-height: 1em;
+  font-weight: $font--heading--bold;
+  color: $color--gray-100;
+
+  del {
+    color: $color--gray-060;
+    font-size: 0.75em;
+    line-height: 1em;
+
+    + ins {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.body__desc {
+  font-size: 1em;
+  line-height: 1.4375em;
+
+  p,
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    + p,
+    + ul {
+      margin-top: 1.5rem;
+    }
+  }
+
+  ul {
+    list-style: circle;
+    margin-left: 1.125rem;
+    font-weight: $font--heading--bold;
+  }
+
+  li {
+    + li {
+      margin-top: 0.25rem;
+    }
+  }
+
+  + .body__discontinued,
+  + .body__more {
+    margin-top: 1rem;
+  }
+}
+
+.body__discontinued {
+  font-size: 1.25rem;
+  background-color: $color--red-020;
+  border-radius: $border-radius--default;
+  padding: 0.5rem 1rem;
+  font-weight: $font--body--bold;
+
+  + .body__more {
+    margin-top: 1rem;
+  }
+}
+
+.body__more {
+  @include reset-button;
+
+  font-size: 1.125em;
+  font-weight: $font--heading--bold;
+  text-transform: uppercase;
+  display: inline-block;
+  color: $color--brand-blue-100;
+  background-color: transparent;
+
+  &:hover {
+    background-color: inherit;
+    color: $color--brand-blue-050;
+  }
+
+  &:focus {
+    background-color: inherit;
+    color: $color--brand-blue-050;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: $media--tablet) {
+  .body {
+    flex: 1;
+  }
+}
+
+@media (min-width: $media--desktop) {
+  .body {
+    + .product__options {
+      margin-top: 0;
+    }
+  }
+
+  .body__title {
+    font-size: 2em;
+    line-height: 1.125em;
+  }
+}

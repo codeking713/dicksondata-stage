@@ -1,0 +1,24 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import Badge from './'
+
+<Meta title="Components/Atoms/Badge" component={Badge} />
+
+# Badge
+
+Use this to display badge (sale/featured/some text)
+
+<Canvas>
+  <Story name="Component">
+    <Badge vol="Sale" />
+  </Story>
+</Canvas>
+
+# Badge discount
+
+Use this to display badge discount
+
+<Canvas>
+  <Story name="Discount">
+    <Badge vol="50" discount={true} />
+  </Story>
+</Canvas>

@@ -1,0 +1,24 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfCareersListing from './'
+
+<Meta
+  title="Components/Organisms/AcfCareersListing"
+  component={AcfCareersListing}
+/>
+
+# Component
+
+Use this to display the AcfCareersListing component.
+
+<Canvas>
+  <Story name="Component">
+    <AcfCareersListing
+      {...{
+        heading: 'Current Openings',
+        copy: 'If you don\'t see the kind of opportunity you\'re looking\r\nfor, you can always email <a href="mailto:info@dicksondata.com">info@dicksondata.com </a>to tell\r\nus more.',
+        highlights_copy:
+          '<strong>Benefits for qualified employees include:</strong>\r\n<ul>\r\n \t<li>PTO</li>\r\n \t<li>Health insurance</li>\r\n \t<li>Company-provided life insurance</li>\r\n \t<li>Dental and vision benefits</li>\r\n \t<li>401(k) with matching</li>\r\n \t<li>Education assistance</li>\r\n \t<li>Quarterly bonuses</li>\r\n</ul>'
+      }}
+    />
+  </Story>
+</Canvas>

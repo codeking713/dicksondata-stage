@@ -1,0 +1,42 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfTeamMembersSection from './'
+
+<Meta
+  title="Components/Organisms/AcfTeamMembersSection"
+  component={AcfTeamMembersSection}
+/>
+
+# Component
+
+Use this to display the team members section on a page
+
+<Canvas>
+  <Story name="Component">
+    <AcfTeamMembersSection
+      heading=" Meet our experts"
+      copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper elementum egestas. Quisque viverra augue vestibulum pellentesque hendrerit. "
+      items={[
+        {
+          name: 'ANTOINE NGUYEN',
+          title: 'Director of Services',
+          copy: 'Dickson has been helping organizations with their monitoring needs for almost a century. Now, our team of experts is taking compliance one step further by offering time-saving services such as environmental mapping, validation, installation, and calibration.'
+        },
+        {
+          name: 'RAUL LOPEZ',
+          title: 'Validation Engineer',
+          copy: 'Raul is a former quality assurance supervisor and ops lead. What he enjoys most about working at Dickson is the growth of products and services and aggregating data to tell a story about a specific environment.'
+        },
+        {
+          name: 'ADAM SCHULLER',
+          title: 'Validation Engineer',
+          copy: 'Raul is a former quality assurance supervisor and ops lead. What he enjoys most about working at Dickson is the growth of products and services and aggregating data to tell a story about a specific environment.'
+        },
+        {
+          name: 'RAUL LOPEZ',
+          title: 'Validation Engineer',
+          copy: 'Issac previously worked for a large healthcare corporation and enjoys coding. He was drawn to Dickson’s company culture and his favorite part of his job is traveling for on-site customer visits.'
+        }
+      ]}
+    />
+  </Story>
+</Canvas>

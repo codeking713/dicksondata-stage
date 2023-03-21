@@ -1,0 +1,22 @@
+@import '@/styles/variables';
+@import '@/styles/grid';
+
+.container {
+  padding: $margin--lr-desktop;
+  background-color: #fdfeff;
+  border: 1px solid $color--sky-blue-030;
+}
+
+.container h4 {
+  color: $color--gray-050;
+}
+
+.container p {
+  color: $color--gray-050;
+}
+
+.container__link {
+  text-decoration: underline;
+  cursor: pointer;
+  color: $color--sky-blue-100;
+}

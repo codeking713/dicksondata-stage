@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://dicksondata.com/
+
+# Sitemaps
+Sitemap: https://dicksondata.com/sitemap.xml
+Sitemap: https://dicksondata.com/server-sitemap.xml

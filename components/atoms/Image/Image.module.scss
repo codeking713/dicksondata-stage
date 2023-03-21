@@ -1,0 +1,10 @@
+@import '@/styles/variables';
+
+.image--fill {
+  @include background-image;
+}
+
+.caption {
+  font-size: 0.9375rem;
+  font-style: italic;
+}

@@ -1,0 +1,20 @@
+@import '@/styles/variables';
+
+.agreement {
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: $font--heading--bold;
+
+  p {
+    margin-top: 0;
+  }
+}
+
+.agreement__link {
+  margin-left: 0.3rem;
+  color: $color--sky-blue-100;
+}
+
+.agreement--required {
+  color: $color--red-100;
+}

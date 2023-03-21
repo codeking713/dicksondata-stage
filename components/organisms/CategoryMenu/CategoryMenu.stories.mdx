@@ -1,0 +1,24 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import CategoryMenu from './'
+
+<Meta title="Components/Organisms/CategoryMenu" component={CategoryMenu} />
+
+# Component
+
+Use this to display the Category Menu.
+
+<Canvas>
+  <Story name="Component">
+    <CategoryMenu toggleHeading={true} heading={'Products Categories'}>
+      <span title="Data Loggers & Sensors (32)">
+        <div>Troubleshooting</div>
+      </span>
+      <span title="Chart Recorders (24)">
+        <div>Touchscreen Data Loggers</div>
+      </span>
+      <span title="Parts and Accessories (10)">
+        <div>Other</div>
+      </span>
+    </CategoryMenu>
+  </Story>
+</Canvas>

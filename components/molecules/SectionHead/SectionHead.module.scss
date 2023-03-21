@@ -1,0 +1,51 @@
+@import '@/styles/variables';
+
+.container {
+  max-width: $max-width--inner-content;
+
+  &.container--center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.container--right {
+    text-align: right;
+  }
+
+  ul,
+  ol {
+    list-style-position: outside;
+  }
+}
+
+.container__heading {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+
+  &::after {
+    content: '';
+    width: 5.25rem;
+    height: 0.1875rem;
+    border-radius: 1rem;
+    background-color: $color--brand-blue-100;
+    margin-top: 0.75em;
+  }
+
+  &.container__heading--center {
+    align-items: center;
+  }
+
+  &.container__heading--right {
+    align-items: flex-end;
+  }
+
+  + .container__subheading {
+    margin-top: 2rem;
+  }
+}
+
+.container__subheading {
+  font-size: 1.125rem;
+}

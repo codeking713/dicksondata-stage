@@ -1,0 +1,20 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import PageNotifications from './'
+
+<Meta
+  title="Components/Molecules/PageNotifications"
+  component={PageNotifications}
+/>
+
+# PageNotifications
+
+Page Notifications component.
+
+<Canvas>
+  <Story name="Page Notifications">
+    <PageNotifications type="INFO" message="Notification Message" />
+    <PageNotifications type="WARNING" message="Notification Message" />
+    <PageNotifications type="ERROR" message="Notification Message" />
+    <PageNotifications type="SUCCESS" message="Notification Message" />
+  </Story>
+</Canvas>

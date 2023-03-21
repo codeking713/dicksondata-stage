@@ -1,0 +1,30 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import ProductCard from './ProductCard'
+
+<Meta title="Components/Organisms/ProductCard" component={ProductCard} />
+
+# Component
+
+Use this to display Product Card
+
+<Canvas>
+  <Story name="Component">
+    <ProductCard
+      title="Touchscreen Data Logger For Monitoring and Tracking"
+      categoryName="Data Logger"
+      topBadgeTxt="On Sale"
+      description={`
+        <p>Choose a base touchscreen. Both options here are DicksonOne enabled touchscreens meaning they connect…</p>
+        `}
+      salePrice="$150"
+      price="$300"
+      image={{
+        altText: 'test',
+        width: 291,
+        height: 218,
+        mediaItemUrl:
+          'http://dicksondata.local/wp-content/uploads/2020/10/DicksonOne_starter_pack.jpg'
+      }}
+    />
+  </Story>
+</Canvas>

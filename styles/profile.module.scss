@@ -1,0 +1,101 @@
+@import './variables';
+
+.main {
+  margin-bottom: 5vh;
+  // margin-bottom: 79px;
+  height: 266px;
+  background-color: $color--gray-010;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  .tab {
+    margin-right: 84px;
+    margin-top: unset;
+    margin-bottom: 0;
+    padding-bottom: 23px;
+    cursor: pointer;
+  }
+
+  .active {
+    border-bottom: 3px solid $color--brand-blue;
+  }
+
+  .tabsGroup {
+    display: flex;
+    margin-left: 164px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .header {
+    margin-left: 164px;
+  }
+}
+
+@media (max-width: $media--tablet) {
+  .tabsSection {
+    .tab {
+      margin-right: 84px;
+      margin-top: unset;
+      padding-bottom: 23px;
+    }
+
+    .tabs {
+      display: flex;
+      margin-left: 24px;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .tabsHeader {
+      margin-left: 24px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-bottom: 10vh;
+    // margin-bottom: 79px;
+    height: 180px;
+    background-color: $color--gray-010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .tab {
+      margin-right: 9vw;
+      align-self: center;
+      justify-self: center;
+      // margin-left: -10%;
+      margin-top: unset;
+      margin-bottom: 0;
+      padding-bottom: 23px;
+      cursor: pointer;
+    }
+
+    .active {
+      border-bottom: 3px solid $color--brand-blue;
+    }
+
+    .tabsGroup {
+      align-self: center;
+      display: flex;
+      margin-left: 10vw;
+      margin-right: auto;
+      justify-self: center;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .header {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10%;
+    }
+  }
+}

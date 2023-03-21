@@ -1,0 +1,28 @@
+@import '@/styles/variables';
+
+.parent {
+  &.parent--noscroll {
+    position: fixed;
+  }
+}
+
+.parent__main {
+  padding-top: $nav--height--mobile;
+}
+
+@media (min-width: $media--tablet) {
+  .parent {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    &.parent--noscroll {
+      position: inherit;
+    }
+  }
+
+  .parent__main {
+    flex: 1;
+    padding-top: $nav--height--desktop;
+  }
+}

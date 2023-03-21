@@ -1,0 +1,17 @@
+@import '@/styles/variables';
+@import '@/styles/grid';
+
+.paypal {
+  min-width: 400px;
+  min-height: 150px;
+
+  @media (max-width: $media--tablet) {
+    min-width: 250px;
+  }
+}
+
+.paypal--loading {
+  position: absolute;
+  width: 90%;
+  text-align: center;
+}

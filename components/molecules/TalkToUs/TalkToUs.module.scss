@@ -1,0 +1,39 @@
+@import '@/styles/variables';
+
+.container {
+  display: flex;
+  align-items: center;
+
+  p {
+    font-weight: 600;
+    color: $color--white;
+    margin-top: 0;
+    margin-inline-start: 1.063rem;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: $color--white;
+      margin-inline-start: 0.3rem;
+      margin-inline-end: 0.5rem;
+      word-wrap: normal;
+
+      &:hover {
+        color: #3baefa;
+      }
+    }
+  }
+}
+
+@media (max-width: $media--tablet) {
+  .container {
+    p {
+      font-size: 1rem;
+      margin-inline-start: 0.063rem;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}

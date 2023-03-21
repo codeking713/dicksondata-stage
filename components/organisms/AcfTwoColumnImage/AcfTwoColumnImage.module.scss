@@ -1,0 +1,70 @@
+@import '@/styles/variables';
+
+.container__image {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  height: 20rem;
+  position: relative;
+
+  + .container__copy {
+    margin-top: $margin--tb-mobile--child;
+  }
+}
+
+.container__copy__sectionhead {
+  + .container__copy__link {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: $media--phablet) {
+  .container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .container__image {
+    position: absolute;
+    right: 45%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: inherit;
+
+    + .container__copy {
+      margin-top: 0;
+      width: 40%;
+      margin-left: 60%;
+    }
+  }
+
+  .container--right {
+    .container__image {
+      right: 0;
+      left: 45%;
+
+      + .container__copy {
+        margin-top: 0;
+        width: 40%;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: $media--desktop) {
+  .container__image {
+    right: 45%;
+
+    + .container__copy {
+      width: 40%;
+    }
+  }
+
+  .container--right {
+    .container__image {
+      right: 0;
+      left: 45%;
+    }
+  }
+}

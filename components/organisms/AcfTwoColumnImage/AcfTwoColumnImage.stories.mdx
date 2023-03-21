@@ -1,0 +1,52 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfTwoColumnImage from './'
+
+<Meta
+  title="Components/Organisms/AcfTwoColumnImage"
+  component={AcfTwoColumnImage}
+/>
+
+# Component
+
+Use this to display media and Rich Text/WYSIWYG in a 50/50 layout.
+
+<Canvas>
+  <Story name="Component">
+    <AcfTwoColumnImage
+      title="Example Title Here"
+      description={`<b>Lorem Ipsumis</b> <i>simply dummy text</i> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the <b>1500s</b>`}
+      imageMeta={{
+        mediaItemUrl:
+          'https://dicksondata.com/wp-content/uploads/2019/11/iStock-493302504-rs.jpg',
+        altText: 'A screenshot of the codebase.',
+        mediaDetails: {
+          width: 640,
+          height: 480
+        }
+      }}
+    />
+  </Story>
+</Canvas>
+
+## Media Right
+
+Media will display on the right on large screens by default. Use the `mediaRight` prop to display the media on the right side.
+
+<Canvas>
+  <Story name="MediaRight">
+    <AcfTwoColumnImage
+      title="Example Title Here"
+      description={`<b>Lorem Ipsumis</b> <i>simply dummy text</i> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the <b>1500s</b>`}
+      mediaRight={true}
+      imageMeta={{
+        mediaItemUrl:
+          'https://dicksondata.com/wp-content/uploads/2019/11/iStock-493302504-rs.jpg',
+        altText: 'A screenshot of the codebase.',
+        mediaDetails: {
+          width: 640,
+          height: 480
+        }
+      }}
+    />
+  </Story>
+</Canvas>

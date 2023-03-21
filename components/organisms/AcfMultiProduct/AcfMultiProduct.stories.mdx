@@ -1,0 +1,73 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfMultiProduct from './'
+
+<Meta
+  title="Components/Organisms/AcfMultiProduct"
+  component={AcfMultiProduct}
+/>
+
+# Component
+
+Use this to display multi-product List
+
+<Canvas>
+  <Story name="Component">
+    <AcfMultiProduct
+      title="Hospital and healthcare related products"
+      description={
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus vel enim id rutrum. Sed quis imperdiet quam. Duis efficitur vestibulum orci, vel laoreet nisl mollis at.'
+      }
+      ctaText="Learn more"
+      products={[
+        {
+          id: 'cHJvZHVjdDoxMjMzODQ=',
+          name: 'TWE',
+          regularPrice: '$100.00',
+          salePrice: '$70.00',
+          onSale: true,
+          shortDescription: `
+              <p>A capacitive 8" touchscreen offers our best user experience ever, and now features customizable views, alarms, and more. </p>
+              <ul>
+                <li> A capacitive 8” touchscreen offers our </li>
+                <li>Best user experience ever, and now</li>
+                <li>features customizable views, alarms, </li>
+              </ul>
+            `,
+          slug: 'dicksonone-touchscreen-starter-pack',
+          imageMeta: {
+            mediaItemUrl:
+              'https://dicksondata.com/wp-content/uploads/2019/03/TWE-Glass-Bottle-Left-Angle.jpg',
+            altText: 'A screenshot of the codebase.',
+            mediaDetails: {
+              width: 640,
+              height: 480
+            }
+          }
+        },
+        {
+          id: 'cHJvZHVjdDoxMjM123zODQ=',
+          name: 'TWE',
+          regularPrice: '$120.00',
+          shortDescription: `
+              <p>A capacitive 8" touchscreen offers our best user experience ever, and now features customizable views, alarms, and more. </p>
+              <ul>
+                <li> A capacitive 8” touchscreen offers our </li>
+                <li>Best user experience ever, and now</li>
+                <li>features customizable views, alarms, </li>
+              </ul>
+            `,
+          slug: 'dicksonone-touchscreen-starter-pack',
+          imageMeta: {
+            mediaItemUrl:
+              'https://dicksondata.com/wp-content/uploads/2019/03/TWE-Glass-Bottle-Left-Angle.jpg',
+            altText: 'A screenshot of the codebase.',
+            mediaDetails: {
+              width: 640,
+              height: 480
+            }
+          }
+        }
+      ]}
+    />
+  </Story>
+</Canvas>

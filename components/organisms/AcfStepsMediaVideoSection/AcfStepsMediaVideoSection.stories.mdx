@@ -1,0 +1,72 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs/blocks'
+import AcfStepsMediaVideoSection from './'
+
+<Meta
+  title="Components/Organisms/AcfStepsMediaVideoSection"
+  component={AcfStepsMediaVideoSection}
+/>
+
+# Component
+
+When Items Should Display Steps is enabled
+
+<Canvas>
+  <Story name="Items Should Display Steps is enabled">
+    <AcfStepsMediaVideoSection
+      preheading="Solution Process"
+      heading="Over 100 years of excellence in helping our customers achive their environment compliance monitoring needs"
+      itemsShouldDisplaySteps={true}
+      items={[
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        },
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        },
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        },
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        }
+      ]}
+      backgroundMeta={{
+        altText: 'alt text',
+        mediaItemUrl: '#'
+      }}
+    />
+  </Story>
+  <Story name="Items Should Display Steps is disabled">
+    <AcfStepsMediaVideoSection
+      preheading="Solution Process"
+      heading="Over 100 years of excellence in helping our customers achive their environment compliance monitoring needs"
+      itemsShouldDisplaySteps={false}
+      items={[
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        },
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        },
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        },
+        {
+          title: 'Meets all pharmacy and healthcare regulatory requirements',
+          copy: 'Meet regulatory requirements and reduce the risk of non-compliance with continuous vaccine monitoring and digital logs.'
+        }
+      ]}
+      backgroundMeta={{
+        altText: 'alt text',
+        mediaItemUrl: '#'
+      }}
+    />
+  </Story>
+</Canvas>

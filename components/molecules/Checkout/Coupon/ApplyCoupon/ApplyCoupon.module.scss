@@ -1,0 +1,37 @@
+@import '@/styles/variables';
+
+.coupon__fields {
+  display: flex;
+  align-items: baseline;
+
+  @media (max-width: $media--tablet) {
+    display: unset;
+  }
+}
+
+.coupon__fields__code {
+  margin-right: 1rem;
+  margin-left: 0;
+  flex: 1;
+
+  @media (max-width: $media--tablet) {
+    width: 100%;
+  }
+}
+
+.coupon__fields__btn {
+  color: $color--white !important;
+
+  button {
+    justify-self: end;
+  }
+
+  @media (max-width: $media--tablet) {
+    display: block;
+
+    button {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import '@/styles/variables';
+
+.richtext {
+  line-height: 1.4125em;
+  font-size: 1.0625em;
+
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  p {
+    + ul {
+      margin-top: 1.5rem;
+    }
+  }
+
+  li {
+    line-height: 1.4125em;
+
+    + li {
+      margin-top: 1.125em;
+    }
+  }
+}

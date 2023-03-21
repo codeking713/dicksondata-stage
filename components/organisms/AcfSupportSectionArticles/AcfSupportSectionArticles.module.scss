@@ -1,0 +1,56 @@
+@import '@/styles/variables';
+@import '@/styles/grid';
+
+.section {
+  color: $color--gray-090;
+  position: relative;
+  padding-top: $padding--tb;
+  padding-bottom: $padding--tb;
+}
+
+.section__tiles {
+  margin-top: $margin--tb-desktop--child;
+}
+
+.section__tiles__tile {
+  border: 1px solid $color--gray-005;
+  box-shadow: 0 0 6px $color--gray-015;
+  padding: $padding--tb * 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.section__tiles__tile__section {
+  background-color: $color--brand-blue;
+  color: $color--white;
+  border-radius: 1rem;
+  display: inline-block;
+  padding: 0.1rem $padding--lr * 2;
+  font-size: 1em;
+  margin-bottom: 1rem;
+}
+
+.section__tiles__tile__title {
+  font-weight: $font--heading--bold;
+  font-size: 1.625em;
+  margin-bottom: 2rem;
+}
+
+.section__tiles__tile__cta {
+  width: 100%;
+  color: $color--white !important;
+  margin-top: auto;
+}
+
+.section__tiles__tile__articles {
+  margin-bottom: $margin--tb-desktop--child;
+}
+
+.section__tiles__tile__articles__article {
+  margin-bottom: 1rem;
+}
+
+.section__tiles__tile__articles__article__link {
+  text-decoration: none;
+  color: $color--gray-090;
+}
